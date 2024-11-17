@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Academy</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #FF6347, #FF4500); /* Gradient background */
+            color: white;
+        }
+
+        header {
+            font-size: 4em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* FadeIn Animation for header */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Slide-in Animation for container */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 2.8em;
+            color: #FF6347;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.5em;
+            margin-top: 15px;
+            color: #333;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.4em;
+            margin-top: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border 0.3s ease-in-out;
+        }
+
+        input:focus {
+            border-color: #FF6347;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.6em;
+            width: 100%;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FF4500;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        /* Page Layout Styling */
+        .hidden {
+            display: none;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 45%;
+            margin: 10px;
+            padding: 30px;
+            background-color: #FF6347;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            background-color: #FF4500;
+        }
+
+        .box:active {
+            transform: scale(1);
+        }
+
+        .sub-box-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+
+        .sub-box {
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #FF6347;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .sub-box:hover {
+            transform: scale(1.1);
+            background-color: #FF4500;
+        }
+
+        .sub-box:active {
+            transform: scale(1);
+        }
+
+        .notes-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .notes-container button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>WELCOME TO CS ACADEMY</header>
+
+<!-- Page 1: User Information Form -->
+<div id="formPage" class="container">
+    <h2>Enter Your Information</h2>
+    <form id="infoForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Page 2: Thank You Message with OK Button -->
+<div id="secondPage" class="container hidden">
+    <h2>Hi <span id="userName"></span>, Thanks for logging in!</h2>
+    <p>Please click the button to continue to the password page.</p>
+    <button onclick="showPasswordPage()">OK</button>
+</div>
+
+<!-- Page 3: Password Page -->
+<div id="passwordPage" class="container hidden">
+    <h2>Enter Password</h2>
+    <input type="chanpreet7" id="password" placeholder="Enter password" required>
+    <button onclick="checkPassword()">Submit</button>
+    <p id="errorMessage" style="color: red; font-size: 1.2em;">if password is incorrect then contact CHANPREET SINGH FOR SUBSCRIPTION</p>
+</div>
+
+<!-- Page 4: Success Message -->
+<div id="fourthPage" class="container hidden">
+    <h2>Congratulations, You have access!</h2>
+    <p>Welcome to the CS Academy members-only area.</p>
+    <button onclick="showMemberArea()">Go to Member Area</button>
+</div>
+
+<!-- Page 5: Member Area with Boxes -->
+<div id="fifthPage" class="container hidden">
+    <h2>Welcome, CS Academy Member!</h2>
+    <div class="box-container">
+        <button class="box" onclick="showNotesPage()">NOTES</button>
+        <button class="box" onclick="alert('Test Section Coming Soon!')">TESTS</button>
+        <button class="box" onclick="alert('Sample Papers Coming Soon!')">SAMPLE PAPERS</button>
+        <button class="box" onclick="alert('Syllabus Coming Soon!')">SYLLABUS</button>
+        <button class="box" onclick="alert('Help and Support Coming Soon!')">HELP AND SUPPORT</button>
+    </div>
+</div>
+
+<!-- Page 6: Notes Page with Chapters -->
+<div id="notesPage" class="container hidden">
+    <h2>Select a Chapter</h2>
+    <div class="notes-container">
+        <button onclick="showChapterNotes('chapter1')">1. Introduction to Accounting</button>
+        <button onclick="showChapterNotes('chapter2')">2. Basics of Accounting Terms</button>
+        <button onclick="showChapterNotes('chapter3')">3. Theory Base of Accounting</button>
+        <button onclick="showChapterNotes('chapter4')">4. Bases of Accounting</button>
+        <button onclick="showChapterNotes('chapter5')">5. Accounting Equation</button>
+        <button onclick="showChapterNotes('chapter6')">6. Rules of Debit and Credit</button>
+        <button onclick="showChapterNotes('chapter7')">7. Vouchers</button>
+        <button onclick="showChapterNotes('chapter8')">8. Journal</button>
+        <button onclick="showChapterNotes('chapter9')">9. Ledger</button>
+        <button onclick="showChapterNotes('chapter10')">10. Cash Book</button>
+        <button onclick="showChapterNotes('chapter11')">11. Other Books</button>
+        <button onclick="showChapterNotes('chapter12')">12. GST</button>
+        <button onclick="showChapterNotes('chapter13')">13. Bank Reconciliation Statement</button>
+        <button onclick="showChapterNotes('chapter14')">14. Trial Balance</button>
+        <button onclick="showChapterNotes('chapter15')">15. Depreciation</button>
+        <button onclick="showChapterNotes('chapter16')">16. Provision and Reserve</button>
+        <button onclick="showChapterNotes('chapter17')">17. Rectification of Errors</button>
+        <button onclick="showChapterNotes('chapter18')">18. Financial Statement of Sole Proprietor</button>
+        <button onclick="showChapterNotes('chapter19')">19. Financial Statements</button>
+        <button onclick="showChapterNotes('chapter20')">20. Single Entry System</button>
+    </div>
+</div>
+
+<!-- Chapter Notes Section -->
+<div id="chapterNotesPage" class="container hidden">
+    <h2>Chapter Notes</h2>
+    <div id="chapterNotesContent"></div>
+    <button onclick="goBackToNotesPage()">Back to Notes</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 CS Academy. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to show the password page after form submission
+    function showPasswordPage() {
+        document.getElementById('secondPage').classList.add('hidden');
+        document.getElementById('passwordPage').classList.remove('hidden');
+    }
+
+    // Password validation
+    function checkPassword() {
+        const password = document.getElementById('password').value;
+        const correctPassword = "chanpreet7"; // Example correct password
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (password === correctPassword) {
+            document.getElementById('passwordPage').classList.add('hidden');
+            document.getElementById('fourthPage').classList.remove('hidden');
+        } else {
+            errorMessage.textContent = "Incorrect password. Please try again.";
+        }
+    }
+
+    // Show member area on password success
+    function showMemberArea() {
+        document.getElementById('fourthPage').classList.add('hidden');
+        document.getElementById('fifthPage').classList.remove('hidden');
+    }
+
+    // Show notes page
+    function showNotesPage() {
+        document.getElementById('fifthPage').classList.add('hidden');
+        document.getElementById('notesPage').classList.remove('hidden');
+    }
+
+    // Show chapter notes based on chapter selected
+    function showChapterNotes(chapter) {
+        document.getElementById('notesPage').classList.add('hidden');
+        document.getElementById('chapterNotesPage').classList.remove('hidden');
+
+        let notesContent = "";
+        switch (chapter) {
+            case 'chapter1':
+                notesContent = "<h3>Introduction to Accounting</h3><p>Notes for Chapter 1</p>";
+                break;
+            case 'chapter2':
+                notesContent = "<h3>Basics of Accounting Terms</h3><p>Notes for Chapter 2</p>";
+                break;
+            case 'chapter3':
+                notesContent = "<h3>Theory Base of Accounting</h3><p>Notes for Chapter 3</p>";
+                break;
+            case 'chapter4':
+                notesContent = "<h3>Bases of Accounting</h3><p>Notes for Chapter 4</p>";
+                break;
+            case 'chapter5':
+                notesContent = "<h3>Accounting Equation</h3><p>Notes for Chapter 5</p>";
+                break;
+            // Add cases for other chapters here
+        }
+
+        document.getElementById('chapterNotesContent').innerHTML = notesContent;
+    }
+
+    // Go back to the notes page
+    function goBackToNotesPage() {
+        document.getElementById('chapterNotesPage').classList.add('hidden');
+        document.getElementById('notesPage').classList.remove('hidden');
+    }
+
+    // Handle form submission and user details
+    document.getElementById('infoForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent page reload
+        const userName = document.getElementById('name').value;
+        localStorage.setItem('userName', userName);
+        document.getElementById('userName').textContent = userName;
+        document.getElementById('formPage').classList.add('hidden');
+        document.getElementById('secondPage').classList.remove('hidden');
+    });
+</script>
+
+</body>
+</html>
