@@ -3,14 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CS Academy</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8099789017188996"
-     crossorigin="anonymous"></script>
-  <meta name="google-adsense-account" content="ca-pub-8099789017188996">
+  <title>Document</title>
+
+  
+</head>
+<body>
+  <header>WELCOME TO CS ACADEMY</header>
+
+  <!-- Page 1: User Information Form -->
+  <div id="formPage" class="container">
+    <h1>CS ACADEMY</h1>
+    <h2>Enter Your Information</h2>
+    <form id="infoForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="class">Class:</label>
+      <input type="text" id="class" name="class" required>
+
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Page 2: Thank You Message -->
+  <div id="secondPage" class="container hidden">
+    <h2>Hi <span id="userName"></span>, Thanks for logging in!</h2>
+    <p>Please click the button to continue to the password page.</p>
+    <button id="okButton" onclick="showPasswordPage()">OK</button>
+  </div>
+
+  <!-- Page 3: Password Page -->
+  <div id="passwordPage" class="container hidden">
+    <h2>Enter Password</h2>
+    <input type="password" id="password" placeholder="Enter password" required>
+    <button onclick="checkPassword()">Submit</button>
+    <p id="errorMessage" style="color: red; font-size: 1.2em;"></p>
+  </div>
+
+  <!-- Page 4: Success Message -->
+  <div id="fourthPage" class="container hidden">
+    <h2>Congratulations, You have access!</h2>
+    <p>Welcome to the CS Academy members-only area.</p>
+    <button onclick="showMemberArea()">Go to Member Area</button>
+  </div>
+
+  <!-- Page 5: Member Area -->
+  <div id="fifthPage" class="container hidden">
+    <h2>You're now a CS Academy Member!</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box" onclick="showSubjectSelection()">NOTES</button>
+      <button class="chapter-box" onclick="showSamplePapersSelection()">SAMPLE PAPERS</button>
+      <button class="chapter-box" onclick="showTestSubjectSelection()">TESTS</button>
+      <button class="chapter-box" onclick="showSyllabusSelection()">SYLLABUS</button>
+      <button class="chapter-box" onclick="showSubjectSelection()">HELP AND SUPPORT</button>
+    </div>
+  </div>
+    <!-- Page for TESTS subject selection -->
+<div id="testSubjectSelectionPage" class="container hidden">
+    <h2>Select a Subject for TESTS</h2>
+    <div class="chapter-box-container ">
+      <button class="chapter-box" onclick="showAccountancyTests()">Accountancy1</button>
+      <button class="chapter-box" onclick="showEconomicsTests()">Economics1</button>
+      <button class="chapter-box" onclick="showBusinessStudiesTests()">Business Studies1</button>
+    </div>
+    <button onclick="backToMemberArea()">Back to Member Area</button>
+  </div>
+
+  <!-- Page for SYLLABUS subject selection -->
+<div id="syllabusSelectionPage" class="container hidden">
+    <h2>Select a Subject for SYLLABUS</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box syllabus-button" onclick="showAccountancySyllabus()">Accountancy</button>
+      <button class="chapter-box syllabus-button" onclick="showEconomicsSyllabus()">Economics</button>
+      <button class="chapter-box syllabus-button" onclick="showBusinessStudiesSyllabus()">Business Studies</button>
+    </div>
+    <button class="back-button" onclick="backToMemberArea()">Back to Member Area</button>
+  </div>
+  
+  <!-- Page for SAMPLE PAPERS subject selection -->
+  <div id="samplePapersSelectionPage" class="container hidden">
+    <h2>Select a Subject for SAMPLE PAPERS</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box sample-paper-button" onclick="showAccountancySamplePapers()">Accountancy</button>
+      <button class="chapter-box sample-paper-button" onclick="showEconomicsSamplePapers()">Economics</button>
+      <button class="chapter-box sample-paper-button" onclick="showBusinessStudiesSamplePapers()">Business Studies</button>
+    </div>
+    <button class="back-button" onclick="backToMemberArea()">Back to Member Area</button>
+  </div>
+
+  <!-- Page 6: Subject Selection -->
+  <div id="subjectSelectionPage" class="container hidden">
+    <h2>Select a Subject</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box" onclick="showAccountancyChapters()">Accountancy</button>
+      <button class="chapter-box" onclick="showEconomicsChapters()">Economics</button>
+      <button class="chapter-box" onclick="showBusinessStudiesChapters()">Business Studies</button>
+    </div>
+    <button onclick="backToMemberArea()">Back to Member Area</button>
+  </div>
+
+  <!-- Page 7: Accountancy Chapters -->
+  <div id="accountancyChaptersPage" class="container hidden">
+    <h2>Accountancy Class 11 - Chapters</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1T6IrcfXl2FogG3vJdex8jTlDl4aZ97rN/view?usp=drive_link')">Chapter1</button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/13gmImOFH1K_-aQv2kBUVCi5Y_zs4tUJU/view?usp=drive_link')">Chapter2: Introduction to Accounting</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter3</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter4</button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1PkMqg_LJtjmALnh6mmUNObEEZiUEFJyy/view?usp=drive_link')">Chapter5: Accounting Equations</button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1pSzV_kwHNCWK3o7KUp4zuQXZnVJgxa0U/view?usp=sharing')">Chapter6: Rule of Debit and Credit</button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1Cx_og30kbGAXjiSmxcTh1sMEmvSJgeuL/view?usp=drive_link')">Chapter7: Vouchers</button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1tq6POD0fJ20ZCPGL-hKQINGJSEEfjbwn/view?usp=drive_link')">Chapter8: Journal</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter10</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter11</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter12</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter13</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter14</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter15</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter16</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter17</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter18</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter19</button>
+      <button class="chapter-box" onclick="openPDF('')">Chapter20</button>
+    </div>
+    <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
+  </div>
+
+  <!-- Page 8: Economics Chapters -->
+  <div id="economicsChaptersPage" class="container hidden">
+    <h2>Economics Class 11 - Chapters</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box">Chapter 1: Introduction to Economics</button>
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter4</button>
+      <button class="chapter-box">Chapter5</button>
+      <button class="chapter-box">Chapter6</button>
+      <button class="chapter-box">Chapter7</button>
+      <button class="chapter-box">Chapter8</button>
+      <button class="chapter-box">Chapter10</button>
+      <button class="chapter-box">Chapter11</button>
+      <button class="chapter-box">Chapter12</button>
+      <button class="chapter-box">Chapter13</button>
+      <button class="chapter-box">Chapter14</button>
+      <button class="chapter-box">Chapter15</button>
+    </div>
+    <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
+  </div>
+
+  <!-- Page 9: Business Studies Chapters -->
+  <div id="businessStudiesChaptersPage" class="container hidden">
+    <h2>Business Studies Class 11 - Chapters</h2>
+    <div class="chapter-box-container">
+      <button class="chapter-box">Chapter 1: Business and its Types</button>
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter4</button>
+      <button class="chapter-box">Chapter5</button>
+      <button class="chapter-box">Chapter6</button>
+      <button class="chapter-box">Chapter7</button>
+      <button class="chapter-box">Chapter8</button>
+      <button class="chapter-box">Chapter9</button>
+    </div>
+    <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
+  </div>
+
+ 
+
+  <!-- Footer -->
+  <footer>CS Academy © 2024</footer>
+  <head>
   <style>
-    body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(45deg, #7e5eff, #5227ff); /* Purple to White Gradient */
+  /* Global Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f8d6e3, #fce3f2); /* Subtle gradient background */
     margin: 0;
     padding: 0;
     display: flex;
@@ -19,482 +194,333 @@
     height: 100vh;
     flex-direction: column;
     text-align: center;
-    overflow: hidden;
-    animation: fadeIn 2s ease-out forwards;
-    transition: background-color 0.5s ease;
-  }
-  
-  /* Header Styles */
-  header {
-    background: linear-gradient(90deg, #f162f6, #8164ff); /* Purple to White Gradient */
-    color: rgb(225, 210, 254);
-    padding: 50px 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    transition: background-color 0.5s ease; /* Smooth transition for background change */
+}
+
+/* Header Styles */
+header {
+    background-color: #1d3557; /* Darkish Blue */
+    color: white;
+    padding: 80px 0;
     width: 100%;
+    
     text-align: center;
     font-size: 2.8em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
-    animation: slideIn 1s ease-out forwards;
-    animation-delay: 0.2s;
-    transition: transform 0.3s ease;
-  }
-  
-  header:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Container Styles */
-  .container {
+    animation: slideIn 1s ease-out forwards; /* Slide-in effect */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adding a shadow effect */
+}
+
+/* Container Styles */
+.container {
     width: 90%;
-    max-width: 650px;
-    background: linear-gradient(90deg, #00ff44f5, rgb(252, 101, 255)); /* Soft white gradient */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 30px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.4s;
-  }
-  
-  h2 {
-    font-size: 2.5em;
-    color: #000000; /* Purple color for heading */
+    animation: fadeInUp 1s forwards; /* Fade-in-up animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Glowing shadow on hover */
+}
+
+/* Title and Label Styles */
+h1, h2 {
+    font-size: 2.2em;
+    color: #1d3557; /* Darkish Blue */
     margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    
-  }
-  
-  label {
-    font-size: 1.4em;
+    position: relative;
+}
+
+h1:before, h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #ff7f32; /* Orange underline */
+    animation: underline 1s ease-out forwards; /* Underline animation */
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+label {
+    font-size: 1.5em;
     color: #333;
-    margin-top: 20px;
-    transition: color 0.3s;
-  }
-  
-  input {
+    margin-top: 10px;
+}
+
+/* Input and Button Styles */
+input, button {
     padding: 15px;
-    font-size: 1.2em;
-    border-radius: 8px;
+    font-size: 1.3em;
+    border-radius: 5px;
     border: 2px solid #ddd;
     outline: none;
     width: 100%;
     margin-top: 10px;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  }
-  
-  input:focus {
-    border-color: #9b59b6; /* Purple border on focus */
-    transform: scale(1.05);
-    box-shadow: 0 0 5px #9b59b6;
-  }
-  
-  button {
-    padding: 18px;
-    font-size: 1.4em;
-    border-radius: 10px;
-    background-color: #2600ff; /* Purple button */
+    transition: transform 1s, background-color 0.3s, box-shadow 1s ease; /* Adding box-shadow transition */
+}
+
+/* Button Specific Styles */
+button {
+    background-color: #ff7f32; /* Orange */
     color: white;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    margin-top: 20px;
-    width: 100%;
-    animation: fadeInButton 1s ease-out forwards;
-  }
-  
-  button:hover {
-    background-color: #961cca; /* Darker Purple on hover */
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #ff6a13; /* Slightly darker orange on hover */
     transform: scale(1.05);
-    box-shadow: 0 0 10px #8e44ad;
-  }
-  
-  button:active {
-    transform: scale(1);
-  }
-  
-  /* Chapter Box Styles */
-  .chapter-box-container {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+/* Pulse Animation for Button */
+button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: white;
+    opacity: 0.2;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.2;
+    }
+}
+
+/* Chapter Box Container and Animations */
+.chapter-box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
-  }
-  
-  .chapter-box {
-    padding: 20px;
-    background: linear-gradient(135deg, #9b59b6, #ffffff); /* Purple to White Gradient */
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-out forwards;
-  }
-  
-  .chapter-box:hover {
-    background: linear-gradient(135deg, #ffffff, #9b59b6); /* Reverse gradient on hover */
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .chapter-box:active {
-    transform: translateY(0);
-  }
-  
-  /* Footer Styles */
-  footer {
-    margin-top: 40px;
-    background: linear-gradient(45deg, #9b59b6, #d91ca3); /* Purple to White Gradient */
-    color: white;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.chapter-box {
     padding: 15px;
+    background-color: #ff7f32; /* Orange */
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+.chapter-box:hover {
+    transform: scale(1.1);
+    background-color: #ff6a13; /* Slightly darker orange on hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.chapter-box:active {
+    transform: scale(1);
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    background-color: #1d3557; /* Darkish Blue */
+    color: white;
+    padding: 10px;
     width: 100%;
     text-align: center;
     font-size: 1.2em;
-    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hidden Class for Animations */
+.hidden { display: none; } </style>
+
+</head>
+<script>
+    // Form submission handling
+document.getElementById("infoForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const name = document.getElementById("name").value;
+  document.getElementById("userName").textContent = name;
+  document.getElementById("formPage").classList.add("hidden");
+  document.getElementById("secondPage").classList.remove("hidden");
+});
+
+// Show password page function
+function showPasswordPage() {
+  document.getElementById("secondPage").classList.add("hidden");
+  document.getElementById("passwordPage").classList.remove("hidden");
+}
+
+// Password validation
+function checkPassword() {
+  const password = document.getElementById("password").value;
+  if (password === "Chanpreet7") {
+    document.getElementById("passwordPage").classList.add("hidden");
+    document.getElementById("fourthPage").classList.remove("hidden");
+  } else {
+    document.getElementById("errorMessage").textContent = "Incorrect password. Please try again.";
   }
+}
+
+// Navigate to the member area
+function showMemberArea() {
+  document.getElementById("fifthPage").classList.remove("hidden");
+  document.getElementById("fourthPage").classList.add("hidden");
+}
+
+// Navigate to subject selection
+function showSubjectSelection() {
+  document.getElementById("subjectSelectionPage").classList.remove("hidden");
+  document.getElementById("fifthPage").classList.add("hidden");
+}
+
+// Navigate to the subject selection page for TESTS
+function showTestSubjectSelection() {
+  alert("You have selected the Test subjects.");
+  document.getElementById("testSubjectSelectionPage").classList.remove("hidden");
+  document.getElementById("fifthPage").classList.add("hidden");
+  document.getElementById("syllabusSelectionPage").classList.add("hidden");
+  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+}
+
+// Navigate to the subject selection page for SYLLABUS
+function showSyllabusSelection() {
+  alert("You have selected the Syllabus.");
+  document.getElementById("syllabusSelectionPage").classList.remove("hidden");
+  document.getElementById("fifthPage").classList.add("hidden");
+  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+}
+
+// Navigate to the subject selection page for SAMPLE PAPERS
+function showSamplePapersSelection() {
+  alert("You have selected Sample Papers.");
+  document.getElementById("samplePapersSelectionPage").classList.remove("hidden");
+  document.getElementById("fifthPage").classList.add("hidden");
+  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+  document.getElementById("syllabusSelectionPage").classList.add("hidden");
+}
+
+// Go back to the member area
+function backToMemberArea() {
+  document.getElementById("fifthPage").classList.remove("hidden");
+  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+  document.getElementById("syllabusSelectionPage").classList.add("hidden");
+  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+  document.getElementById("notesPage").classList.add("hidden");
+  document.getElementById("helpAndSupportPage").classList.add("hidden");
+}
+
+// Chapter PDF open function
+function openPDF(url) {
+  window.open(url, '_blank');
+}
+
+// Show subject chapters for Accountancy
+function showAccountancyChapters() {
+  alert("You have selected Accountancy.");
+  document.getElementById("accountancyChaptersPage").classList.remove("hidden");
+  document.getElementById("subjectSelectionPage").classList.add("hidden");
+}
+
+// Show subject chapters for Economics
+function showEconomicsChapters() {
+  alert("You have selected Economics.");
+  document.getElementById("economicsChaptersPage").classList.remove("hidden");
+  document.getElementById("subjectSelectionPage").classList.add("hidden");
+}
+
+// Show subject chapters for Business Studies
+function showBusinessStudiesChapters() {
+  alert("You have selected Business Studies.");
+  document.getElementById("businessStudiesChaptersPage").classList.remove("hidden");
+  document.getElementById("subjectSelectionPage").classList.add("hidden");
+}
+
+// Go back to subject selection from chapter pages
+function backToSubjectSelection() {
+  document.getElementById("subjectSelectionPage").classList.remove("hidden");
+  document.getElementById("accountancyChaptersPage").classList.add("hidden");
+  document.getElementById("economicsChaptersPage").classList.add("hidden");
+  document.getElementById("businessStudiesChaptersPage").classList.add("hidden");
+}
+
+// Show the Notes page
+function showNotes() {
+  document.getElementById("notesPage").classList.remove("hidden");
+  document.getElementById("fifthPage").classList.add("hidden");
+  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+  document.getElementById("syllabusSelectionPage").classList.add("hidden");
+  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+  document.getElementById("helpAndSupportPage").classList.add("hidden");
+}
+
+// Show the Help and Support page
+function showHelpAndSupport() {
+  document.getElementById("helpAndSupportPage").classList.remove("hidden");
+  document.getElementById("fifthPage").classList.add("hidden");
+  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+  document.getElementById("syllabusSelectionPage").classList.add("hidden");
+  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+  document.getElementById("notesPage").classList.add("hidden");
+}
+</script>
   
-  footer:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Keyframe Animations */
-  
-  /* Fade-in animation for body */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Slide-in animation for header */
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  
-  /* Fade-up animation for containers and chapter boxes */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Text glow animation */
-  @keyframes textGlow {
-    0% {
-      text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6;
-    }
-    100% {
-      text-shadow: 0 0 15px #9b59b6, 0 0 30px #ffffff;
-    }
-  }
-  
-  /* Fade-in button animation */
-  @keyframes fadeInButton {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Hidden Class for Animations */
-  .hidden {
-    display: none;
-  }
-  
-  /* Media Queries for Responsiveness */
-  
-  /* Small screens (phones and tablets) */
-  @media (max-width: 768px) {
-    body {
-      padding: 10px;
-    }
-  
-    .container {
-      padding: 20px;
-    }
-  
-    h2 {
-      font-size: 2em;
-    }
-  
-    .chapter-box-container {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .chapter-box {
-      font-size: 1.1em;
-    }
-  
-    button {
-      font-size: 1.2em;
-      padding: 15px;
-    }
-  
-    header {
-      padding: 30px 0;
-      font-size: 2.2em;
-    }
-  }
-  
-  /* Extra Small Screens (Small Phones) */
-  @media (max-width: 480px) {
-    body {
-      padding: 5px;
-    }
-  
-    .container {
-      width: 100%;
-      padding: 15px;
-    }
-  
-    h2 {
-      font-size: 1.8em;
-    }
-  
-    .chapter-box-container {
-      grid-template-columns: 1fr;
-    }
-  
-    button {
-      font-size: 1.1em;
-      padding: 12px;
-    }
-  
-    header {
-      padding: 25px 0;
-      font-size: 1.8em;
-    }
-  }
-  
-  </style>
-  </html>
-  <body>
-    <!-- Header with site title -->
-    <header>WELCOME TO CS ACADEMY</header>
-  
-    <!-- Page 1: User Information Form -->
-    <div id="formPage" class="container">
-      <h1>CS ACADEMY</h1>
-      <h2>Enter Your Information</h2>
-      <form id="infoForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-  
-        <label for="class">Class:</label>
-        <input type="text" id="class" name="class" required>
-  
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-  
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-  
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-  
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  
-    <!-- Page 2: Thank You Message -->
-    <div id="secondPage" class="container hidden">
-      <h2>Hi <span id="userName"></span>, Thanks for logging in!</h2>
-      <p>Please click the button to continue to the password page.</p>
-      <button id="okButton" onclick="showPasswordPage()">OK</button>
-    </div>
-  
-    <!-- Page 3: Password Page -->
-    <div id="passwordPage" class="container hidden">
-      <h2>Enter Password</h2>
-      <input type="password" id="password" placeholder="Enter password" required>
-      <button onclick="checkPassword()">Submit</button>
-      <p id="errorMessage" style="color: red; font-size: 1.2em;"></p>
-    </div>
-  
-    <!-- Page 4: Success Message -->
-    <div id="fourthPage" class="container hidden">
-      <h2>Congratulations, You have access!</h2>
-      <p>Welcome to the CS Academy members-only area.</p>
-      <button onclick="showMemberArea()">Go to Member Area</button>
-    </div>
-  
-    <!-- Page 5: Member Area -->
-    <div id="fifthPage" class="container hidden">
-      <h2>You're now a CS Academy Member!</h2>
-      <div class="chapter-box-container">
-        <button class="chapter-box" onclick="showSubjectSelection()">NOTES</button>
-        <button class="chapter-box" onclick="showSubjectSelection()">SAMPLE PAPERS</button>
-        <button class="chapter-box" onclick="showSubjectSelection()">TESTS</button>
-        <button class="chapter-box" onclick="showSubjectSelection()">SYLLABUS</button>
-        <button class="chapter-box" onclick="showSubjectSelection()">HELP AND SUPPORT</button>
-      </div>
-    </div>
-  
-    <!-- Page 6: Subject Selection -->
-    <div id="subjectSelectionPage" class="container hidden">
-      <h2>Select a Subject</h2>
-      <div class="chapter-box-container">
-        <button class="chapter-box" onclick="showAccountancyChapters()">Accountancy</button>
-        <button class="chapter-box" onclick="showEconomicsChapters()">Economics</button>
-        <button class="chapter-box" onclick="showBusinessStudiesChapters()">Business Studies</button>
-      </div>
-      <button onclick="backToMemberArea()">Back to Member Area</button>
-    </div>
-  
-    <!-- Page 7: Accountancy Chapters -->
-    <div id="accountancyChaptersPage" class="container hidden">
-      <h2>Accountancy Class 11 - Chapters</h2>
-      <div class="chapter-box-container">
-        <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1T6IrcfXl2FogG3vJdex8jTlDl4aZ97rN/view?usp=drive_link')">Chapter1</button>
-        <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/13gmImOFH1K_-aQv2kBUVCi5Y_zs4tUJU/view?usp=drive_link')">Chapter2: Introduction to Accounting</button>
-        <button class="chapter-box" onclick="openPDF('')">Chapter3</button>
-        <button class="chapter-box" onclick="openPDF('')">Chapter4 </button>
-        <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1PkMqg_LJtjmALnh6mmUNObEEZiUEFJyy/view?usp=drive_link')">Chapter5: accounting equations </button>
-        <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1pSzV_kwHNCWK3o7KUp4zuQXZnVJgxa0U/view?usp=sharing')">Chapter6: rule of debit and credit </button>
-        <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1Cx_og30kbGAXjiSmxcTh1sMEmvSJgeuL/view?usp=drive_link')">Chapter7: vouchers  </button>
-        <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1tq6POD0fJ20ZCPGL-hKQINGJSEEfjbwn/view?usp=drive_link')">Chapter8: journal </button>
-        <button class="chapter-box" onclick="openPDF('')">Chapter10 </button>
-        <button class="chapter-box"onclick="openPDF('')" >Chapter11 </button>
-        <button class="chapter-box" onclick="openPDF('')">Chapter12 </button>
-        <button class="chapter-box" onclick="openPDF('')">Chapter13 </button>
-        <button class="chapter-box" >Chapter14 </button>
-        <button class="chapter-box" >Chapter15 </button>
-        <button class="chapter-box">Chapter16 </button>
-        <button class="chapter-box" >Chapter17 </button>
-        <button class="chapter-box" >Chapter18 </button>
-        <button class="chapter-box" >Chapter19 </button>
-        <button class="chapter-box" >Chapter20 </button>
-        <!-- Other chapters here -->
-      </div>
-      <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
-    </div>
-     <!-- Page 8: Economics Chapters -->
-     <div id="economicsChaptersPage" class="container hidden">
-      <h2>Economics Class 11 - Chapters</h2>
-      <div class="chapter-box-container">
-        <button class="chapter-box">Chapter 1: Introduction to Economics</button>
-        <button class="chapter-box" >Chapter3 </button>
-        <button class="chapter-box" >Chapter4 </button>
-        <button class="chapter-box" >Chapter5 </button>
-        <button class="chapter-box" >Chapter6 </button>
-        <button class="chapter-box" >Chapter7 </button>
-        <button class="chapter-box" >Chapter8 </button>
-        <button class="chapter-box" >Chapter10 </button>
-        <button class="chapter-box">Chapter11 </button>
-        <button class="chapter-box" >Chapter12 </button>
-        <button class="chapter-box" >Chapter13 </button>
-        <button class="chapter-box" >Chapter14 </button>
-        <button class="chapter-box" >Chapter15 </button>
-        <!-- Other chapters here -->
-      </div>
-      <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
-    </div>
-  
-    <!-- Page 9: Business Studies Chapters -->
-    <div id="businessStudiesChaptersPage" class="container hidden">
-      <h2>Business Studies Class 11 - Chapters</h2>
-      <div class="chapter-box-container">
-        <button class="chapter-box">Chapter 1: Business and its Types</button>
-        <button class="chapter-box" >Chapter3 </button>
-        <button class="chapter-box" >Chapter4 </button>
-        <button class="chapter-box" >Chapter5 </button>
-        <button class="chapter-box" >Chapter6 </button>
-        <button class="chapter-box" >Chapter7 </button>
-        <button class="chapter-box" >Chapter8 </button>
-        <button class="chapter-box" >Chapter10 </button>
-        <button class="chapter-box">Chapter11 </button>
-        <button class="chapter-box" >Chapter12 </button>
-        <button class="chapter-box" >Chapter13 </button>
-        <button class="chapter-box" >Chapter14 </button>
-        <button class="chapter-box" >Chapter15 </button>  
-        <!-- Other chapters here -->
-      </div>
-      <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
-    </div>
-  
-    <!-- Footer with copyright message -->
-    <footer>&copy; 2024 CS Academy. All rights reserved.</footer>
-  <script>
-    // Show second page after form submission
-    document.getElementById("infoForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form from submitting
-        const name = document.getElementById("name").value;
-        document.getElementById("userName").innerText = name;
-        document.getElementById("formPage").classList.add("hidden");
-        document.getElementById("secondPage").classList.remove("hidden");
-      });
-      
-      // Show password page
-      function showPasswordPage() {
-        document.getElementById("secondPage").classList.add("hidden");
-        document.getElementById("passwordPage").classList.remove("hidden");
-      }
-      
-      // Check password
-      function checkPassword() {
-        const password = document.getElementById("password").value;
-        if (password === "Chanpreet700") {
-          document.getElementById("passwordPage").classList.add("hidden");
-          document.getElementById("fourthPage").classList.remove("hidden");
-        } else {
-          document.getElementById("errorMessage").innerText = "Incorrect Password!";
-        }
-      }
-      
-      // Show member area after success
-      function showMemberArea() {
-        document.getElementById("fourthPage").classList.add("hidden");
-        document.getElementById("fifthPage").classList.remove("hidden");
-      }
-      
-      // Show subject selection
-      function showSubjectSelection() {
-        document.getElementById("fifthPage").classList.add("hidden");
-        document.getElementById("subjectSelectionPage").classList.remove("hidden");
-      }
-      
-      // Back to member area
-      function backToMemberArea() {
-        document.getElementById("subjectSelectionPage").classList.add("hidden");
-        document.getElementById("fifthPage").classList.remove("hidden");
-      }
-      
-      // Show Accountancy chapters
-      function showAccountancyChapters() {
-        document.getElementById("subjectSelectionPage").classList.add("hidden");
-        document.getElementById("accountancyChaptersPage").classList.remove("hidden");
-      }
-      
-      // Back to subject selection
-      function backToSubjectSelection() {
-        document.getElementById("accountancyChaptersPage").classList.add("hidden");
-        document.getElementById("subjectSelectionPage").classList.remove("hidden");
-      }
-      
-      // Open PDF in a new tab
-      function openPDF(url) {
-        window.open(url, '_blank');
-      }
-      </script>
-      
+</body>
+</html>
