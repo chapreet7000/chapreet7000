@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   
 </head>
 <body>
@@ -116,8 +117,23 @@
   <div id="accountancyChaptersPage" class="container hidden">
     <h2>Accountancy Class 11 - Chapters</h2>
     <div class="chapter-box-container">
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1T6IrcfXl2FogG3vJdex8jTlDl4aZ97rN/view?usp=drive_link')">Chapter1</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/13gmImOFH1K_-aQv2kBUVCi5Y_zs4tUJU/view?usp=drive_link')">Chapter2: Introduction to Accounting</button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('')"></button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1T6IrcfXl2FogG3vJdex8jTlDl4aZ97rN/view?usp=drive_link')">Chapter1: Introduction to Accounting</button>
+      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/13gmImOFH1K_-aQv2kBUVCi5Y_zs4tUJU/view?usp=drive_link')">Chapter2: Basis of Accounting</button>
       <button class="chapter-box" onclick="openPDF('')">Chapter3</button>
       <button class="chapter-box" onclick="openPDF('')">Chapter4</button>
       <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1PkMqg_LJtjmALnh6mmUNObEEZiUEFJyy/view?usp=drive_link')">Chapter5: Accounting Equations</button>
@@ -143,7 +159,15 @@
   <div id="economicsChaptersPage" class="container hidden">
     <h2>Economics Class 11 - Chapters</h2>
     <div class="chapter-box-container">
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter3</button>
+      <button class="chapter-box">Chapter3</button>
       <button class="chapter-box">Chapter 1: Introduction to Economics</button>
+      <button class="chapter-box">Chapter2</button>
+      
       <button class="chapter-box">Chapter3</button>
       <button class="chapter-box">Chapter4</button>
       <button class="chapter-box">Chapter5</button>
@@ -182,213 +206,190 @@
   <footer>CS Academy © 2024</footer>
   <head>
   <style>
-  /* Global Body Styles */
+    /* General Styling */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f8d6e3, #fce3f2); /* Subtle gradient background */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 2s forwards; /* Fade-in animation */
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    transition: background-color 0.5s ease; /* Smooth transition for background change */
-}
-
-/* Header Styles */
-header {
-    background-color: #1d3557; /* Darkish Blue */
+    background: linear-gradient(45deg, #FF6347, #FF4500); /* Gradient background */
     color: white;
-    padding: 80px 0;
-    width: 100%;
-    
+}
+
+header {
+    font-size: 4em;
+    font-weight: bold;
     text-align: center;
-    font-size: 2.8em;
+    margin-bottom: 50px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: slideIn 1s ease-out forwards; /* Slide-in effect */
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Adding a shadow effect */
+    letter-spacing: 3px;
+    animation: fadeIn 1.5s ease-out;
 }
 
-/* Container Styles */
+/* FadeIn Animation for header */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .container {
-    width: 90%;
-    max-width: 600px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    opacity: 0;
-    animation: fadeInUp 1s forwards; /* Fade-in-up animation */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    animation: slideIn 1s ease-out;
 }
 
-.container:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Glowing shadow on hover */
-}
-
-/* Title and Label Styles */
-h1, h2 {
-    font-size: 2.2em;
-    color: #1d3557; /* Darkish Blue */
-    margin-bottom: 20px;
-    position: relative;
-}
-
-h1:before, h2:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: #ff7f32; /* Orange underline */
-    animation: underline 1s ease-out forwards; /* Underline animation */
-}
-
-@keyframes underline {
-    from {
-        width: 0;
+/* Slide-in Animation for container */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
     }
-    to {
-        width: 100%;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
+}
+
+h2 {
+    font-size: 2.8em;
+    color: #FF6347;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 label {
     font-size: 1.5em;
+    margin-top: 15px;
     color: #333;
-    margin-top: 10px;
+    display: block;
 }
 
-/* Input and Button Styles */
-input, button {
-    padding: 15px;
-    font-size: 1.3em;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-    outline: none;
+input {
     width: 100%;
+    padding: 15px;
+    font-size: 1.4em;
     margin-top: 10px;
-    transition: transform 1s, background-color 0.3s, box-shadow 1s ease; /* Adding box-shadow transition */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out;
 }
 
-/* Button Specific Styles */
+input:focus {
+    border-color: #FF6347;
+}
+
 button {
-    background-color: #ff7f32; /* Orange */
+    padding: 20px;
+    font-size: 1.6em;
+    width: 100%;
+    background-color: #FF6347;
     color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ff6a13; /* Slightly darker orange on hover */
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+    background-color: #FF4500;
 }
 
-/* Pulse Animation for Button */
-button:before {
-    content: '';
+footer {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: white;
-    opacity: 0.2;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: pulse 1.5s infinite;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
 }
 
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0.2;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0.2;
-    }
+/* Page Layout Styling */
+.hidden {
+    display: none;
 }
 
-/* Chapter Box Container and Animations */
-.chapter-box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column width */
-    gap: 10px;
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-top: 20px;
 }
 
-.chapter-box {
-    padding: 15px;
-    background-color: #ff7f32; /* Orange */
+.box {
+    width: 45%;
+    margin: 10px;
+    padding: 30px;
+    background-color: #FF6347;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.5em;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 0.5s forwards;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.chapter-box:hover {
+.box:hover {
     transform: scale(1.1);
-    background-color: #ff6a13; /* Slightly darker orange on hover */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    background-color: #FF4500;
 }
 
-.chapter-box:active {
+.box:active {
     transform: scale(1);
 }
 
-/* Footer Styles */
-footer {
-    margin-top: 30px;
-    background-color: #1d3557; /* Darkish Blue */
+.sub-box-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.sub-box {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #FF6347;
     color: white;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
     font-size: 1.2em;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.sub-box:hover {
+    transform: scale(1.1);
+    background-color: #FF4500;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.sub-box:active {
+    transform: scale(1);
 }
 
-@keyframes slideIn {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
+.notes-container {
+    flex-direction: box;
+    margin-top: 0px;
 }
 
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
+.notes-container button {
+    margin: 10px 0;
 }
-
-/* Hidden Class for Animations */
-.hidden { display: none; } </style>
+  </style>
 
 </head>
 <script>
@@ -524,3 +525,4 @@ function showHelpAndSupport() {
   
 </body>
 </html>
+
