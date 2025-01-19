@@ -42,21 +42,52 @@
     <p>Please click the button to continue to the password page.</p>
     <button id="okButton" onclick="showPasswordPage()">OK</button>
   </div>
+<!-- Class Selection Page -->
+<div id="classSelectionPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
+  <h2>Select Your Class</h2>
+  <button id="class11Button" onclick="showClass11PasswordPage()">Class 11</button>
+  <button id="class12Button" onclick="showClass12PasswordPage()">Class 12</button>
+</div>
 
-  <!-- Page 3: Password Page -->
-  <div id="passwordPage" class="container hidden">
-    <h2>Enter Password</h2>
-    <input type="password" id="password" placeholder="Enter password" required>
-    <button onclick="checkPassword()">Submit</button>
-    <p id="errorMessage" style="color: red; font-size: 1.2em;"></p>
-  </div>
+ <!-- Class 11 Password Page -->
+<div id="class11PasswordPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
+  <h2>Enter Class 11 Password</h2>
+  <label for="class11Password">Password:</label>
+  <input type="password" id="class11Password" placeholder="Enter Class 11 password">
+  <button onclick="checkClass11Password()">Submit</button>
+  <p id="class11ErrorMessage" style="color:red;"></p>
+</div>
+
+<!-- Class 12 Password Page -->
+<div id="class12PasswordPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
+  <h2>Enter Class 12 Password</h2>
+  <label for="class12Password">Password:</label>
+  <input type="password" id="class12Password" placeholder="Enter Class 12 password">
+  <button onclick="checkClass12Password()">Submit</button>
+  <p id="class12ErrorMessage" style="color:red;"></p>
+</div>
+
+<!-- Class 12 Success Page -->
+<div id="class12SuccessPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
+  <h2>Success!</h2>
+  <p>You've successfully logged in for Class 12.</p>
+  <button onclick="goToMemberArea()">Go to 12th Member Area</button>
+</div>
 
   <!-- Page 4: Success Message -->
   <div id="fourthPage" class="container hidden">
     <h2>Congratulations, You have access!</h2>
     <p>Welcome to the CS Academy members-only area.</p>
-    <button onclick="showMemberArea()">Go to Member Area</button>
+    <button onclick="showMemberArea()">Go to 11th Member Area</button>
   </div>
+
+
+<!-- Member Area Page for Class 12 -->
+<div id="memberAreaPage" class="hidden">
+  <h2>Welcome to the Member Area for Class 12</h2>
+  <p>Here you can access your courses, materials, and more!</p>
+</div>
+
 
   <!-- Page 5: Member Area -->
   <div id="fifthPage" class="container hidden">
@@ -210,7 +241,7 @@
   <footer>CS Academy © 2024</footer>
   <head>
   <style>
-    /* General Styling */
+     /* General Styling */
 /* Base styles */
 body {
     font-family: 'Poppins', sans-serif;
@@ -300,22 +331,24 @@ input:focus {
     border-color: #FF6347;
 }
 
+/* Glow on Hover */
 button {
-    padding: 20px;
-    font-size: 1.6em;
-    width: 100%;
     background-color: #FF6347;
     color: white;
-    border: none;
-    border-radius: 8px;
+    border: 2px solid #FF6347;
+    padding: 20px;
+    font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #FF4500;
-}
+    margin: 10px;
+    border-radius: 15px;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    box-shadow: 0 0 15px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8);
+  }
+  
 
 footer {
     position: absolute;
@@ -439,142 +472,301 @@ body::after {
     footer {
         font-size: 1em;
     }
+
 }
+
+div {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Class Selection Page */
+  #classSelectionPage {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 105%; /* Slightly exceed the viewport width */
+    max-width: 650px; /* Limit max width for consistency */
+    margin-right: 20px; /* Add spacing from the right */
+    animation: slideIn 1s ease-out;
+    position: relative;
+    height: 250px;
+  }
+  
+  #classSelectionPage h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+ 
+  
+  /* Class 11 and Class 12 Password Pages */
+  input[type="password"] {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 105%; /* Slightly exceed the viewport width */
+    max-width: 650px; /* Limit max width for consistency */
+    margin-right: 20px; /* Add spacing from the right */
+    animation: slideIn 1s ease-out;
+    position: relative;
+  }
+  
+  #class11PasswordPage, #class12PasswordPage {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 105%; /* Slightly exceed the viewport width */
+    max-width: 650px; /* Limit max width for consistency */
+    margin-right: 20px; /* Add spacing from the right */
+    animation: slideIn 1s ease-out;
+    position: relative;
+  }
+  
+  #class11PasswordPage h2, #class12PasswordPage h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #errorMessage {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Success Pages */
+  #class11SuccessPage, #class12SuccessPage {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 105%; /* Slightly exceed the viewport width */
+    max-width: 650px; /* Limit max width for consistency */
+    margin-right: 20px; /* Add spacing from the right */
+    animation: slideIn 1s ease-out;
+    position: relative; /* Ensures content is treated as a block */
+  }
+  
+  #class11SuccessPage h2, #class12SuccessPage h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Member Area */
+  #memberAreaPage {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 105%; /* Slightly exceed the viewport width */
+    max-width: 650px; /* Limit max width for consistency */
+    margin-right: 20px; /* Add spacing from the right */
+    animation: slideIn 1s ease-out;
+    position: relative; /* Ensures content is treated as a block */
+  }
+  
+  #memberAreaPage h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #memberAreaPage p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
   </style>
 
 </head>
 <script>
     // Form submission handling
-document.getElementById("infoForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  const name = document.getElementById("name").value;
-  document.getElementById("userName").textContent = name;
-  document.getElementById("formPage").classList.add("hidden");
-  document.getElementById("secondPage").classList.remove("hidden");
-});
-
-// Show password page function
-function showPasswordPage() {
-  document.getElementById("secondPage").classList.add("hidden");
-  document.getElementById("passwordPage").classList.remove("hidden");
-}
-
-// Password validation
-function checkPassword() {
-  const password = document.getElementById("password").value;
-  if (password === "Chanpreet7") {
-    document.getElementById("passwordPage").classList.add("hidden");
-    document.getElementById("fourthPage").classList.remove("hidden");
-  } else {
-    document.getElementById("errorMessage").textContent = "Incorrect password. Please try again.";
+    document.getElementById("infoForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    document.getElementById("userName").textContent = name;
+    document.getElementById("formPage").classList.add("hidden");
+    document.getElementById("secondPage").classList.remove("hidden");
+  });
+  
+  // Show password page function
+  function showPasswordPage() {
+    document.getElementById("secondPage").classList.add("hidden");
+document.getElementById("classSelectionPage").classList.remove("hidden");
   }
-}
-
-// Navigate to the member area
-function showMemberArea() {
-  document.getElementById("fifthPage").classList.remove("hidden");
-  document.getElementById("fourthPage").classList.add("hidden");
-}
-
-// Navigate to subject selection
-function showSubjectSelection() {
-  document.getElementById("subjectSelectionPage").classList.remove("hidden");
-  document.getElementById("fifthPage").classList.add("hidden");
-}
-
-// Navigate to the subject selection page for TESTS
-function showTestSubjectSelection() {
-  alert("You have selected the Test subjects.");
-  document.getElementById("testSubjectSelectionPage").classList.remove("hidden");
-  document.getElementById("fifthPage").classList.add("hidden");
-  document.getElementById("syllabusSelectionPage").classList.add("hidden");
-  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-}
-
-// Navigate to the subject selection page for SYLLABUS
-function showSyllabusSelection() {
-  alert("You have selected the Syllabus.");
-  document.getElementById("syllabusSelectionPage").classList.remove("hidden");
-  document.getElementById("fifthPage").classList.add("hidden");
-  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-}
-
-// Navigate to the subject selection page for SAMPLE PAPERS
-function showSamplePapersSelection() {
-  alert("You have selected Sample Papers.");
-  document.getElementById("samplePapersSelectionPage").classList.remove("hidden");
-  document.getElementById("fifthPage").classList.add("hidden");
-  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-  document.getElementById("syllabusSelectionPage").classList.add("hidden");
-}
-
-// Go back to the member area
-function backToMemberArea() {
-  document.getElementById("fifthPage").classList.remove("hidden");
-  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-  document.getElementById("syllabusSelectionPage").classList.add("hidden");
-  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-  document.getElementById("notesPage").classList.add("hidden");
-  document.getElementById("helpAndSupportPage").classList.add("hidden");
-}
-
-// Chapter PDF open function
-function openPDF(url) {
-  window.open(url, '_blank');
-}
-
-// Show subject chapters for Accountancy
-function showAccountancyChapters() {
-  alert("You have selected Accountancy.");
-  document.getElementById("accountancyChaptersPage").classList.remove("hidden");
-  document.getElementById("subjectSelectionPage").classList.add("hidden");
-}
-
-// Show subject chapters for Economics
-function showEconomicsChapters() {
-  alert("You have selected Economics.");
-  document.getElementById("economicsChaptersPage").classList.remove("hidden");
-  document.getElementById("subjectSelectionPage").classList.add("hidden");
-}
-
-// Show subject chapters for Business Studies
-function showBusinessStudiesChapters() {
-  alert("You have selected Business Studies.");
-  document.getElementById("businessStudiesChaptersPage").classList.remove("hidden");
-  document.getElementById("subjectSelectionPage").classList.add("hidden");
-}
-
-// Go back to subject selection from chapter pages
-function backToSubjectSelection() {
-  document.getElementById("subjectSelectionPage").classList.remove("hidden");
-  document.getElementById("accountancyChaptersPage").classList.add("hidden");
-  document.getElementById("economicsChaptersPage").classList.add("hidden");
-  document.getElementById("businessStudiesChaptersPage").classList.add("hidden");
-}
-
-// Show the Notes page
-function showNotes() {
-  document.getElementById("notesPage").classList.remove("hidden");
-  document.getElementById("fifthPage").classList.add("hidden");
-  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-  document.getElementById("syllabusSelectionPage").classList.add("hidden");
-  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-  document.getElementById("helpAndSupportPage").classList.add("hidden");
-}
-
-// Show the Help and Support page
-function showHelpAndSupport() {
-  document.getElementById("helpAndSupportPage").classList.remove("hidden");
-  document.getElementById("fifthPage").classList.add("hidden");
-  document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-  document.getElementById("syllabusSelectionPage").classList.add("hidden");
-  document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-  document.getElementById("notesPage").classList.add("hidden");
-}
+  // Handle Class Selection
+document.getElementById("class11Button").addEventListener("click", function () {
+    document.getElementById("classSelectionPage").classList.add("hidden");
+    document.getElementById("passwordPage").classList.remove("hidden"); // Continue for Class 11
+  });
+  
+  document.getElementById("class12Button").addEventListener("click", function () {
+    alert("Currently, only Class 11 resources are available.");
+  });
+  
+// Show Class 11 password page
+function showClass11PasswordPage() {
+    // Hide class selection page and show Class 11 password page
+    document.getElementById("classSelectionPage").classList.add("hidden");
+    document.getElementById("class11PasswordPage").classList.remove("hidden");
+  }
+  
+  // Show Class 12 password page
+  function showClass12PasswordPage() {
+    // Hide class selection page and show Class 12 password page
+    document.getElementById("classSelectionPage").classList.add("hidden");
+    document.getElementById("class12PasswordPage").classList.remove("hidden");
+  }
+  
+  // Check Class 11 password
+function checkClass11Password() {
+    const password = document.getElementById("class11Password").value;
+    if (password === "Chanpreet11") {
+      // Correct password, proceed to the success message (4th page)
+      alert("Class 11 password correct!");
+      
+      // Hide the Class 11 password page
+      document.getElementById("class11PasswordPage").classList.add("hidden");
+      
+      // Show the success page (4th page)
+      document.getElementById("fourthPage").classList.remove("hidden");
+    } else {
+      // Incorrect password, display an error message
+      document.getElementById("class11ErrorMessage").textContent = "Incorrect password. Please try again.";
+    }
+  }
+  
+  // Check Class 12 password
+function checkClass12Password() {
+    const password = document.getElementById("class12Password").value;
+    if (password === "Chanpreet12") {
+      // Correct password, proceed to the success message (Class 12 success page)
+      alert("Class 12 password correct!");
+      
+      // Hide the Class 12 password page
+      document.getElementById("class12PasswordPage").classList.add("hidden");
+      
+      // Show the success page for Class 12
+      document.getElementById("class12SuccessPage").classList.remove("hidden");
+    } else {
+      // Incorrect password, display an error message
+      document.getElementById("class12ErrorMessage").textContent = "Incorrect password. Please try again.";
+    }
+  }
+  
+  // Navigate to the member area
+  function showMemberArea() {
+    document.getElementById("fifthPage").classList.remove("hidden");
+    document.getElementById("fourthPage").classList.add("hidden");
+  }
+  // Function to navigate to the member area for Class 12
+function goToMemberArea() {
+    // Assuming you're hiding the success page and showing the member area
+    document.getElementById("class12SuccessPage").classList.add("hidden");
+    document.getElementById("memberAreaPage").classList.remove("hidden");
+  }
+  
+  // Navigate to subject selection
+  function showSubjectSelection() {
+    document.getElementById("subjectSelectionPage").classList.remove("hidden");
+    document.getElementById("fifthPage").classList.add("hidden");
+  }
+  
+  // Navigate to the subject selection page for TESTS
+  function showTestSubjectSelection() {
+    alert("You have selected the Test subjects.");
+    document.getElementById("testSubjectSelectionPage").classList.remove("hidden");
+    document.getElementById("fifthPage").classList.add("hidden");
+    document.getElementById("syllabusSelectionPage").classList.add("hidden");
+    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+  }
+  
+  // Navigate to the subject selection page for SYLLABUS
+  function showSyllabusSelection() {
+    alert("You have selected the Syllabus.");
+    document.getElementById("syllabusSelectionPage").classList.remove("hidden");
+    document.getElementById("fifthPage").classList.add("hidden");
+    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+  }
+  
+  // Navigate to the subject selection page for SAMPLE PAPERS
+  function showSamplePapersSelection() {
+    alert("You have selected Sample Papers.");
+    document.getElementById("samplePapersSelectionPage").classList.remove("hidden");
+    document.getElementById("fifthPage").classList.add("hidden");
+    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+    document.getElementById("syllabusSelectionPage").classList.add("hidden");
+  }
+  
+  // Go back to the member area
+  function backToMemberArea() {
+    document.getElementById("fifthPage").classList.remove("hidden");
+    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+    document.getElementById("syllabusSelectionPage").classList.add("hidden");
+    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+    document.getElementById("notesPage").classList.add("hidden");
+    document.getElementById("helpAndSupportPage").classList.add("hidden");
+  }
+  
+  // Chapter PDF open function
+  function openPDF(url) {
+    window.open(url, '_blank');
+  }
+  
+  // Show subject chapters for Accountancy
+  function showAccountancyChapters() {
+    alert("You have selected Accountancy.");
+    document.getElementById("accountancyChaptersPage").classList.remove("hidden");
+    document.getElementById("subjectSelectionPage").classList.add("hidden");
+  }
+  
+  // Show subject chapters for Economics
+  function showEconomicsChapters() {
+    alert("You have selected Economics.");
+    document.getElementById("economicsChaptersPage").classList.remove("hidden");
+    document.getElementById("subjectSelectionPage").classList.add("hidden");
+  }
+  
+  // Show subject chapters for Business Studies
+  function showBusinessStudiesChapters() {
+    alert("You have selected Business Studies.");
+    document.getElementById("businessStudiesChaptersPage").classList.remove("hidden");
+    document.getElementById("subjectSelectionPage").classList.add("hidden");
+  }
+  
+  // Go back to subject selection from chapter pages
+  function backToSubjectSelection() {
+    document.getElementById("subjectSelectionPage").classList.remove("hidden");
+    document.getElementById("accountancyChaptersPage").classList.add("hidden");
+    document.getElementById("economicsChaptersPage").classList.add("hidden");
+    document.getElementById("businessStudiesChaptersPage").classList.add("hidden");
+  }
+  
+  // Show the Notes page
+  function showNotes() {
+    document.getElementById("notesPage").classList.remove("hidden");
+    document.getElementById("fifthPage").classList.add("hidden");
+    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+    document.getElementById("syllabusSelectionPage").classList.add("hidden");
+    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+    document.getElementById("helpAndSupportPage").classList.add("hidden");
+  }
+  
+  // Show the Help and Support page
+  function showHelpAndSupport() {
+    document.getElementById("helpAndSupportPage").classList.remove("hidden");
+    document.getElementById("fifthPage").classList.add("hidden");
+    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
+    document.getElementById("syllabusSelectionPage").classList.add("hidden");
+    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
+    document.getElementById("notesPage").classList.add("hidden");
+  }
 </script>
   
 </body>
 </html>
-
