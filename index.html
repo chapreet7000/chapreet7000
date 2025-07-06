@@ -1,772 +1,3132 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
-  <title>CS ACADEMY</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Store - Premium eBooks for Class 12</title>
+     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>WELCOME TO   CS ACADEMY</header>
+    <!-- ========================================= -->
+    <!-- EBOOK DATA STORAGE - EDIT THIS SECTION -->
+    <!-- ========================================= -->
+    <script type="application/json" id="ebookData">
+    {
+        "books": [
+            {
+                "id": 1,
+                "title": "Mathematics for Class 12",
+                "author": "CHANPREET SINGH",
+                "subject": "mathematics",
+                "description": "Comprehensive guide covering calculus, algebra, trigonometry, and coordinate geometry with solved examples and practice problems.",
+                "fullDescription": "This comprehensive mathematics textbook is designed specifically for Class 12 students preparing for board examinations and competitive tests. It covers all major topics including differential calculus, integral calculus, linear algebra, probability, and statistics. Each chapter includes step-by-step solutions, practice exercises, and real-world applications to help students master complex mathematical concepts.",
+                "price": "Premium",
+                "originalPrice": "₹899",
+                "discountPrice": "₹FREE",
+                "rating": 4.8,
+                "reviews": 1247,
+                "pages": 50,
+                "language": "English",
+                "publisher": "Academic Excellence Publications",
+                "publishYear": 2024,
+                "isbn": "978-81-123-4567-8",
+                "difficulty": "Advanced",
+                "chapters": 18,
+                "features": ["Step-by-step solutions", "Practice exercises", "Previous year questions", "Online support"],
+                "password": "math2024",
+                "downloadLink": "https://drive.google.com/file/d/1QSmxivBkb_lNfWzuCO0HaT51nffMimQa/view?usp=drive_link",
+                "thumbnail": "📚",
+                "previewPages": 25,
+                "downloadCount": 15420,
+                "lastUpdated": "2025-07-05"
+            },
+            {
+                "id": 2,
+                "title": "ACCOUNTANCY CLASS 12TH",
+                "author": "CHANPREET SINGH",
+                "subject": "ACCOUNTANCY",
+                "description": "Complete physics textbook with theoretical concepts, practical applications, and comprehensive problem-solving techniques.",
+                "fullDescription": "A masterpiece in accounts education, this book combines theoretical understanding with practical applications. It covers mechanics, thermodynamics, electromagnetism, optics, and modern physics with detailed explanations, diagrams, and real-world examples. Perfect for students aiming for engineering entrance exams and board examinations.",
+                "price": "Premium",
+                "originalPrice": "₹1299",
+                "discountPrice": "₹899",
+                "rating": 4.9,
+                "reviews": 2156,
+                "pages": 1024,
+                "language": "English",
+                "publisher": "CS ACADEMY",
+                "publishYear": 2025,
+                "isbn": "978-81-765-4321-9",
+                "difficulty": "Intermediate",
+                "chapters": 22,
+                "features": ["Conceptual clarity", "Numerical problems", "Experimental procedures", "JEE/NEET preparation"],
+                "password": "physics123",
+                "downloadLink": "https://drive.google.com/file/d/1xRMb82MR68tqD5yzcXo3xYlJCpZoU-Dz/view?usp=sharing",
+                "thumbnail": "⚛️",
+                "previewPages": 30,
+                "downloadCount": 18750,
+                "lastUpdated": "2024-02-01"
+            },
+            {
+                "id": 3,
+                "title": "MACRO ECONOMICS CLASS 12TH",
+                "author": "CHANPREET SINGH",
+                "subject": "ECONOMICS",
+                "description": "In-depth coverage of organic chemistry reactions, mechanisms, and industrial applications with detailed explanations.",
+                "fullDescription": "This comprehensive organic chemistry textbook provides deep insights into reaction mechanisms, stereochemistry, and synthetic pathways. It includes detailed coverage of hydrocarbons, functional groups, biomolecules, and polymers with emphasis on understanding rather than memorization. Essential for medical and engineering entrance preparations.",
+                "price": "Premium",
+                "originalPrice": "₹1199",
+                "discountPrice": "₹799",
+                "rating": 4.7,
+                "reviews": 987,
+                "pages": 742,
+                "language": "English",
+                "publisher": "CS ACADEMY",
+                "publishYear": 2025,
+                "isbn": "978-81-987-6543-2",
+                "difficulty": "Advanced",
+                "chapters": 16,
+                "features": ["Reaction mechanisms", "3D molecular models", "Industrial applications", "Practice problems"],
+                "password": "chem2024",
+                "downloadLink": "https://your-website.com/chemistry-book.pdf",
+                "thumbnail": "🧪",
+                "previewPages": 20,
+                "downloadCount": 12340,
+                "lastUpdated": "2024-01-20"
+            },
+            {
+                "id": 4,
+                "title": "BUSINESS STUDIES CLASS 12TH",
+                "author": "Dr.CHANPREET SINGH",
+                "subject": "BUSINESS STUDIES",
+                "description": "Comprehensive bUSIENSS STUDIES textbook covering molecular biology, genetics, ecology, and human physiology with modern research.",
+                "fullDescription": "An extensive exploration of life sciences covering cell biology, genetics, evolution, ecology, and human physiology. This textbook integrates classical concepts with modern research findings, making it perfect for students pursuing medical sciences. Includes detailed diagrams, case studies, and current scientific developments.",
+                "price": "Premium",
+                "originalPrice": "₹1099",
+                "discountPrice": "₹749",
+                "rating": 4.6,
+                "reviews": 1456,
+                "pages": 892,
+                "language": "English",
+                "publisher": "CS ACADEMY",
+                "publishYear": 2025,
+                "isbn": "978-81-456-7890-1",
+                "difficulty": "Intermediate",
+                "chapters": 20,
+                "features": ["Detailed diagrams", "Case studies", "Modern research", "NEET preparation"],
+                "password": "bio123",
+                "downloadLink": "https://dropbox.com/s/your-biology-link/biology.pdf",
+                "thumbnail": "🧬",
+                "previewPages": 28,
+                "downloadCount": 14680,
+                "lastUpdated": "2024-01-25"
+            },
+            {
+                "id": 5,
+                "title": "Computer Science with Python",
+                "author": "Reema Thareja",
+                "subject": "computer",
+                "description": "Complete guide to programming with Python, data structures, algorithms, and database management for Class 12 curriculum.",
+                "fullDescription": "A comprehensive guide to computer science fundamentals using Python programming language. Covers object-oriented programming, data structures, algorithms, database management, and web development. Includes practical projects, coding exercises, and real-world applications to build strong programming skills.",
+                "price": "Premium",
+                "originalPrice": "₹999",
+                "discountPrice": "₹699",
+                "rating": 4.8,
+                "reviews": 2034,
+                "pages": 654,
+                "language": "English",
+                "publisher": "Oxford University Press",
+                "publishYear": 2024,
+                "isbn": "978-81-234-5678-9",
+                "difficulty": "Beginner to Intermediate",
+                "chapters": 14,
+                "features": ["Hands-on coding", "Project-based learning", "Industry practices", "Career guidance"],
+                "password": "code2024",
+                "downloadLink": "https://mega.nz/file/your-cs-file-link",
+                "thumbnail": "💻",
+                "previewPages": 35,
+                "downloadCount": 19250,
+                "lastUpdated": "2024-02-05"
+            },
+            {
+                "id": 6,
+                "title": "English Literature & Grammar",
+                "author": "William Shakespeare Collection",
+                "subject": "english",
+                "description": "Comprehensive English literature guide with grammar fundamentals, poetry analysis, and prose comprehension techniques.",
+                "fullDescription": "An extensive collection covering English literature, grammar, and composition skills. Includes analysis of classic works, poetry interpretation, essay writing techniques, and advanced grammar concepts. Perfect for developing strong communication skills and literary appreciation essential for academic and professional success.",
+                "price": "Premium",
+                "originalPrice": "₹799",
+                "discountPrice": "₹549",
+                "rating": 4.5,
+                "reviews": 876,
+                "pages": 598,
+                "language": "English",
+                "publisher": "Macmillan Education",
+                "publishYear": 2024,
+                "isbn": "978-81-345-6789-0",
+                "difficulty": "Intermediate",
+                "chapters": 12,
+                "features": ["Literary analysis", "Grammar exercises", "Writing techniques", "Vocabulary building"],
+                "password": "eng2024",
+                "downloadLink": "https://example.com/english-class12.pdf",
+                "thumbnail": "📖",
+                "previewPages": 22,
+                "downloadCount": 11890,
+                "lastUpdated": "2024-01-30"
+            }
+        ]
+    }
+    </script>
+    <!-- ========================================= -->
+    <!-- END OF EBOOK DATA STORAGE -->
+    <!-- ========================================= -->
 
-  <!-- Page 1: User Information Form -->
-  <div id="formPage" class="container">
-    <h1>CS ACADEMY</h1>
-    <h2>Enter Your Information</h2>
-    <form id="infoForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CS ACADEMY</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active" onclick="showHome()">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" onclick="showAbout()">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="#contact" class="nav-link" onclick="showContact()">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-      <label for="class">Class:</label>
-      <input type="text" id="class" name="class" required>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Premium eBooks for Class 12</h1>
+                        <p class="hero-subtitle">Unlock your academic potential with our comprehensive collection of Class 12 eBooks. Quality education resources at your fingertips.</p>
+                        <div class="hero-cta">
+                            <button class="cta-button" onclick="scrollToBooks()">
+                                <i class="fas fa-book-open"></i>
+                                Explore eBooks
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="heroBookCount">6</div>
+                            <div class="stat-label">Premium eBooks</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Quality Content</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Access</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-header">
+                        <h2>Find Your Perfect Study Material</h2>
+                        <p>Search through our curated collection of Class 12 eBooks</p>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search for eBooks by title, author, or subject..." onkeyup="searchBooks()">
+                    </div>
+                    <div class="filter-section">
+                        <div class="filter-label">Filter by Subject:</div>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" onclick="filterBooks('all')">All Subjects</button>
+                            <button class="filter-btn" onclick="filterBooks('mathematics')">Mathematics</button>
+                            <button class="filter-btn" onclick="filterBooks('physics')">ACCOUNTANCY</button>
+                            <button class="filter-btn" onclick="filterBooks('chemistry')">ECONOMICS</button>
+                            <button class="filter-btn" onclick="filterBooks('biology')">BUSINESS STUDIES</button>
+                            <button class="filter-btn" onclick="filterBooks('computer')">Computer Science</button>
+                            <button class="filter-btn" onclick="filterBooks('english')">English</button>
+                        </div>
+                    </div>
+                    <div class="sort-section">
+                        <div class="sort-label">Sort by:</div>
+                        <select id="sortSelect" onchange="sortBooks()" class="sort-dropdown">
+                            <option value="title">Title (A-Z)</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="price">Price (Low to High)</option>
+                            <option value="downloads">Most Downloaded</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" required>
+        <!-- Books Grid -->
+        <section class="books-section" id="booksSection">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Available eBooks</h2>
+                    <p class="section-subtitle">Comprehensive study materials for Class 12 students</p>
+                </div>
+                <div class="books-grid" id="booksGrid">
+                    <!-- Books will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
 
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required>
+        <!-- About Section -->
+        <section class="about-section" id="aboutSection" style="display: none;">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-header">
+                        <h2>About CS ACADEMY</h2>
+                        <p>Your trusted partner in academic excellence</p>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h3>Quality Content</h3>
+                            <p>Carefully curated eBooks from renowned authors and publishers, ensuring the highest quality educational content for Class 12 students.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Secure Access</h3>
+                            <p>Protected content with secure password access, ensuring that only authorized users can access premium educational materials.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>24/7 Availability</h3>
+                            <p>Access your eBooks anytime, anywhere. Study at your own pace with our always-available digital library platform.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Academic Excellence</h3>
+                            <p>Designed specifically for Class 12 curriculum, helping students achieve their academic goals and excel in examinations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contactSection" style="display: none;">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-header">
+                        <h2>Get in Touch</h2>
+                        <p>Have questions? We're here to help you succeed</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3>Email Us</h3>
+                                <p>csacademy7000@gmail.com</p>
+                                <p>info@csacademy.com</p>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h3>Call Us</h3>
+                                <p>+918384051563</p>
+                                <p>Mon-Fri: 9AM-6PM</p>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>Visit Us</h3>
+                                <p>123 Education Street</p>
+                                <p>Learning City, shastri nagar</p>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <h3>Send us a Message</h3>
+                            <form onsubmit="submitContactForm(event)">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <!-- Page 2: Thank You Message -->
-  <div id="secondPage" class="container hidden">
-    <h2>Hi <span id="userName"></span>, Thanks for logging in!</h2>
-    <p>Please click the button to continue to the password page.</p>
-    <button id="okButton" onclick="showPasswordPage()">OK</button>
-  </div>
-<!-- Class Selection Page -->
-<div id="classSelectionPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
-  <h2>Select Your Class</h2>
-  <button id="class11Button" onclick="showClass11PasswordPage()">Class 11</button>
-  <button id="class12Button" onclick="showClass12PasswordPage()">Class 12</button>
-</div>
-
- <!-- Class 11 Password Page -->
-<div id="class11PasswordPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
-  <h2>Enter Class 11 Password</h2>
-  <label for="class11Password">Password:</label>
-  <input type="password" id="class11Password" placeholder="Enter Class 11 password">
-  <button onclick="checkClass11Password()">Submit</button>
-  <p id="class11ErrorMessage" style="color:red;"></p>
-</div>
-
-<!-- Class 12 Password Page -->
-<div id="class12PasswordPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
-  <h2>Enter Class 12 Password</h2>
-  <label for="class12Password">Password:</label>
-  <input type="password" id="class12Password" placeholder="Enter Class 12 password">
-  <button onclick="checkClass12Password()">Submit</button>
-  <p id="class12ErrorMessage" style="color:red;"></p>
-</div>
-
-<!-- Class 12 Success Page -->
-<div id="class12SuccessPage" class="hidden" style="background-color: white; padding: 20px; border-radius: 10px;">
-  <h2>Success!</h2>
-  <p>You've successfully logged in for Class 12.</p>
-  <button onclick="goToMemberArea()">Go to 12th Member Area</button>
-</div>
-
-  <!-- Page 4: Success Message -->
-  <div id="fourthPage" class="container hidden">
-    <h2>Congratulations, You have access!</h2>
-    <p>Welcome to the CS Academy members-only area.</p>
-    <button onclick="showMemberArea()">Go to 11th Member Area</button>
-  </div>
-
-
-<!-- Member Area Page for Class 12 -->
-<div id="memberAreaPage" class="hidden">
-  <h2>Welcome to the Member Area for Class 12</h2>
-  <p>Here you can access your courses, materials, and more!</p>
-</div>
-
-
-  <!-- Page 5: Member Area -->
-  <div id="fifthPage" class="container hidden">
-    <h2>You're now a CS Academy Member!</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box" onclick="showSubjectSelection()">NOTES</button>
-      <button class="chapter-box" onclick="showSamplePapersSelection()">SAMPLE PAPERS</button>
-      <button class="chapter-box" onclick="showTestSubjectSelection()">TESTS</button>
-      <button class="chapter-box" onclick="showSyllabusSelection()">SYLLABUS</button>
-      <button class="chapter-box" onclick="showSubjectSelection()">HELP AND SUPPORT</button>
+    <!-- Book Detail Modal -->
+    <div class="modal" id="bookDetailModal">
+        <div class="modal-content book-detail-content">
+            <div class="modal-header">
+                <h3>Book Details</h3>
+                <button class="close-btn" onclick="closeBookDetailModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="book-detail-grid">
+                    <div class="book-detail-left">
+                        <div class="book-cover">
+                            <span id="detailBookThumbnail">📚</span>
+                        </div>
+                        <div class="book-badges">
+                            <span class="badge bestseller" id="detailBestseller">Bestseller</span>
+                            <span class="badge difficulty" id="detailDifficulty">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="book-detail-right">
+                        <h2 id="detailBookTitle">Book Title</h2>
+                        <p class="detail-author">by <span id="detailBookAuthor">Author Name</span></p>
+                        <div class="rating-section">
+                            <div class="stars" id="detailStars"></div>
+                            <span class="rating-text" id="detailRating">4.8</span>
+                            <span class="reviews-count">(<span id="detailReviews">1,247</span> reviews)</span>
+                        </div>
+                        <div class="price-section">
+                            <span class="current-price" id="detailCurrentPrice">₹599</span>
+                            <span class="original-price" id="detailOriginalPrice">₹899</span>
+                            <span class="discount" id="detailDiscount">33% OFF</span>
+                        </div>
+                        <div class="book-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span><span id="detailPages">856</span> Pages</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-language"></i>
+                                <span id="detailLanguage">English</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-download"></i>
+                                <span><span id="detailDownloads">15,420</span> Downloads</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-calendar"></i>
+                                <span id="detailYear">2024</span>
+                            </div>
+                        </div>
+                        <div class="book-features">
+                            <h4>Key Features:</h4>
+                            <ul id="detailFeatures">
+                                <!-- Features will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary unlock-detail-btn" onclick="openUnlockModalFromDetail()">
+                                <i class="fas fa-unlock"></i>
+                                Unlock eBook
+                            </button>
+                            <button class="btn btn-secondary preview-btn" onclick="previewBook()">
+                                <i class="fas fa-eye"></i>
+                                Preview (<span id="detailPreviewPages">25</span> pages)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-description-section">
+                    <h3>About this Book</h3>
+                    <p id="detailFullDescription">Full description will be loaded here...</p>
+                </div>
+                <div class="book-info-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="showTab('details')">Details</button>
+                        <button class="tab-btn" onclick="showTab('contents')">Contents</button>
+                        <button class="tab-btn" onclick="showTab('reviews')">Reviews</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="detailsTab" class="tab-pane active">
+                            <div class="detail-info-grid">
+                                <div class="info-item">
+                                    <strong>Publisher:</strong>
+                                    <span id="detailPublisher">CS ACADEMY</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>ISBN:</strong>
+                                    <span id="detailISBN">978-81-123-4567-8</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Chapters:</strong>
+                                    <span id="detailChapters">18</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Last Updated:</strong>
+                                    <span id="detailLastUpdated">June 15, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contentsTab" class="tab-pane">
+                            <div class="contents-preview">
+                                <h4>Table of Contents</h4>
+                                <div id="tableOfContents">
+                                    <!-- Table of contents will be generated based on chapters -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="reviewsTab" class="tab-pane">
+                            <div class="reviews-section">
+                                <div class="review-summary">
+                                    <div class="rating-breakdown">
+                                        <div class="rating-bar">
+                                            <span>5 ⭐</span>
+                                            <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                                            <span>75%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>4 ⭐</span>
+                                            <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                                            <span>20%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>3 ⭐</span>
+                                            <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                                            <span>3%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>2 ⭐</span>
+                                            <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                            <span>1%</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>1 ⭐</span>
+                                            <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                            <span>1%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sample-reviews">
+                                    <div class="review-item">
+                                        <div class="reviewer-info">
+                                            <strong>Rahul S.</strong>
+                                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                        </div>
+                                        <p>"Excellent book with clear explanations and comprehensive coverage. Highly recommended for Class 12 students."</p>
+                                    </div>
+                                    <div class="review-item">
+                                        <div class="reviewer-info">
+                                            <strong>Priya M.</strong>
+                                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                                        </div>
+                                        <p>"The step-by-step solutions and practice problems are incredibly helpful. Great value for money!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-    <!-- Page for TESTS subject selection -->
-<div id="testSubjectSelectionPage" class="container hidden">
-    <h2>Select a Subject for TESTS</h2>
-    <div class="chapter-box-container ">
-      <button class="chapter-box" onclick="showAccountancyTests()">Accountancy1</button>
-      <button class="chapter-box" onclick="showEconomicsTests()">Economics1</button>
-      <button class="chapter-box" onclick="showBusinessStudiesTests()">Business Studies1</button>
+
+    <!-- Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Unlock Premium eBook</h3>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="book-preview">
+                    <div class="book-thumbnail" id="modalBookThumbnail">📚</div>
+                    <div class="book-info">
+                        <h4 id="modalBookTitle"></h4>
+                        <p class="book-author" id="modalBookAuthor"></p>
+                        <p class="book-subject" id="modalBookSubject"></p>
+                    </div>
+                </div>
+                <div class="password-form">
+                    <label for="passwordInput">Enter Access Password:</label>
+                    <input type="password" id="passwordInput" placeholder="Enter book password" onkeypress="handlePasswordKeyPress(event)">
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" onclick="checkPassword()">
+                            <i class="fas fa-unlock"></i>
+                            Unlock eBook
+                        </button>
+                        <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    </div>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </div>
     </div>
-    <button onclick="backToMemberArea()">Back to Member Area</button>
-  </div>
 
-  <!-- Page for SYLLABUS subject selection -->
-<div id="syllabusSelectionPage" class="container hidden">
-    <h2>Select a Subject for SYLLABUS</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box syllabus-button" onclick="showAccountancySyllabus()">Accountancy</button>
-      <button class="chapter-box syllabus-button" onclick="showEconomicsSyllabus()">Economics</button>
-      <button class="chapter-box syllabus-button" onclick="showBusinessStudiesSyllabus()">Business Studies</button>
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-content">
+            <div class="modal-header">
+                <h3>Access Granted!</h3>
+                <button class="close-btn" onclick="closeSuccessModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h4>eBook Unlocked Successfully!</h4>
+                <p>You can now view your premium eBook and start studying.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-success" id="viewPdfBtn">
+                        <i class="fas fa-eye"></i>
+                        View PDF
+                    </button>
+                    <button class="btn btn-secondary" onclick="closeSuccessModal()">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <button class="back-button" onclick="backToMemberArea()">Back to Member Area</button>
-  </div>
-  
-  <!-- Page for SAMPLE PAPERS subject selection -->
-  <div id="samplePapersSelectionPage" class="container hidden">
-    <h2>Select a Subject for SAMPLE PAPERS</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box sample-paper-button" onclick="showAccountancySamplePapers()">Accountancy</button>
-      <button class="chapter-box sample-paper-button" onclick="showEconomicsSamplePapers()">Economics</button>
-      <button class="chapter-box sample-paper-button" onclick="showBusinessStudiesSamplePapers()">Business Studies</button>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
     </div>
-    <button class="back-button" onclick="backToMemberArea()">Back to Member Area</button>
-  </div>
 
-  <!-- Page 6: Subject Selection -->
-  <div id="subjectSelectionPage" class="container hidden">
-    <h2>Select a Subject</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box" onclick="showAccountancyChapters()">Accountancy</button>
-      <button class="chapter-box" onclick="showEconomicsChapters()">Economics</button>
-      <button class="chapter-box" onclick="showBusinessStudiesChapters()">Business Studies</button>
-    </div>
-    <button onclick="backToMemberArea()">Back to Member Area</button>
-  </div>
-
-  <!-- Page 7: Accountancy Chapters -->
-  <div id="accountancyChaptersPage" class="container hidden">
-    <h2>Accountancy Class 11 - Chapters</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('')"></button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1T6IrcfXl2FogG3vJdex8jTlDl4aZ97rN/view?usp=drive_link')">Chapter1: Introduction to Accounting</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/13gmImOFH1K_-aQv2kBUVCi5Y_zs4tUJU/view?usp=drive_link')">Chapter2: Basis of Accounting</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1oF4Frmp-ho_rcsakgc6yR2Fbt_XSGXBR/view?usp=sharing')">Chapter3: Theory Base of Accounting</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1IG9YMWBUZbR-TkMXDxnB79Lw0GxBQrO8/view?usp=sharing')">Chapter4: Cash/Accrual Basis</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1PkMqg_LJtjmALnh6mmUNObEEZiUEFJyy/view?usp=drive_link')">Chapter5: Accounting Equations</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1pSzV_kwHNCWK3o7KUp4zuQXZnVJgxa0U/view?usp=sharing')">Chapter6: Rule of Debit and Credit</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1Cx_og30kbGAXjiSmxcTh1sMEmvSJgeuL/view?usp=drive_link')">Chapter7: Vouchers</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1tq6POD0fJ20ZCPGL-hKQINGJSEEfjbwn/view?usp=drive_link')">Chapter8: Journal</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/14MP6aEL3GCjFSAO2g80esLV4eWW3zGEx/view?usp=sharing')">Chapter9:Ledger</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1F6BtPDc4T4UJh3HAIcBVfTMxvAXEsTyF/view?usp=sharing')">Chapter10: Cash Book</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1SvJ8cMa470Q1udAAQ9tn70S6azxWJvqU/view?usp=sharing')">Chapter11: Subsidary Books</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter12</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter13</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter14</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter15</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter16</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter17</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter18</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter19</button>
-      <button class="chapter-box" onclick="openPDF('')">Chapter20</button>
-    </div>
-    <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
-  </div>
-
-  <!-- Page 8: Economics Chapters -->
-  <div id="economicsChaptersPage" class="container hidden">
-    <h2>Economics Class 11 - Chapters</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box"></button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/16xqXypdHL4cJ1riz3Zp1w-TKXBDRx7Ip/view?usp=drive_link')">Chapter 1: Introduction to Economics</button>
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1orlYnLgu9e7f8DVk7vjEsQKYe0XovjPt/view?usp=sharing')">Chapter2: Consumer Equilibrium</button>
-      
-      <button class="chapter-box" onclick="openPDF('//drive.google.com/file/d/1LKSvzZKQUQuhgJ0txcpuSEAZS_LwsYEv/view?usp=sharing')">Chapter3: Demand</button>
-      <button class="chapter-box"onclick="openPDF('//drive.google.com/file/d/16cz28CrJ-k_bMGlwqRvo4T09eCohOumv/view?usp=sharing')">Chapter4:Elasticity of Demand</button>
-      <button class="chapter-box"onclick="openPDF('//drive.google.com/file/d/1kzfTr8bt9dnesQr27SsX6GFfFAN-vEKs/view?usp=sharing')">Chapter5: Production Function</button>
-      <button class="chapter-box"onclick="openPDF('//drive.google.com/file/d/10eWQvPKUzIyapnlMmCf8A5Nlven51VkJ/view?usp=sharing')">Chapter6: Cost</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter6</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter7</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter8</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter10</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter11</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter12</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter13</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter14</button>
-      <button class="chapter-box"onclick="openPDF('')">Chapter15</button>
-    </div>
-    <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
-  </div>
-
-  <!-- Page 9: Business Studies Chapters -->
-  <div id="businessStudiesChaptersPage" class="container hidden">
-    <h2>Business Studies Class 11 - Chapters</h2>
-    <div class="chapter-box-container">
-      <button class="chapter-box">Chapter 1: Business and its Types</button>
-      <button class="chapter-box">Chapter3</button>
-      <button class="chapter-box">Chapter4</button>
-      <button class="chapter-box">Chapter5</button>
-      <button class="chapter-box">Chapter6</button>
-      <button class="chapter-box">Chapter7</button>
-      <button class="chapter-box">Chapter8</button>
-      <button class="chapter-box">Chapter9</button>
-    </div>
-    <button onclick="backToSubjectSelection()">Back to Subject Selection</button>
-  </div>
-
- 
-
-  <!-- Footer -->
-  <footer>CS Academy © 2024</footer>
-  <head>
-  <style>
-     /* General Styling */
-/* Base styles */
-body {
-    font-family: 'Poppins', sans-serif;
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>CS Store</span>
+                    </div>
+                    <p>Your trusted partner for Class 12 educational resources. Empowering students to achieve academic excellence through quality digital content.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="showHome()">Home</a></li>
+                        <li><a href="#about" onclick="showAbout()">About Us</a></li>
+                        <li><a href="#contact" onclick="showContact()">Contact</a></li>
+                        <li><a href="#" onclick="scrollToBooks()">eBooks</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Subjects</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterBooks('mathematics')">Mathematics</a></li>
+                        <li><a href="#" onclick="filterBooks('physics')">Physics</a></li>
+                        <li><a href="#" onclick="filterBooks('chemistry')">Chemistry</a></li>
+                        <li><a href="#" onclick="filterBooks('biology')">Biology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@csstore.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Education Street, Learning City</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CS Store. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+    <style>/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(45deg, #FF4500, #FF4500); /* Gradient background */
-    color: white;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 .container {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 105%; /* Slightly exceed the viewport width */
-    max-width: 650px; /* Limit max width for consistency */
-    margin-right: 20px; /* Add spacing from the right */
-    animation: slideIn 1s ease-out;
-    position: relative; /* Ensures content is treated as a block */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header {
-    font-size: 4em;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    animation: fadeIn 1.5s ease-out;
+/* Header Styles */
+.header {
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #f0f0f0;
 }
 
-/* FadeIn Animation for header */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Slide-in Animation for container */
-@keyframes slideIn {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
 }
 
-h2 {
-    font-size: 2.8em;
-    color: #FF6347;
-    margin-bottom: 30px;
-    text-align: center;
+.nav-brand i {
+    font-size: 2rem;
+    color: #000000;
 }
 
-label {
-    font-size: 1.5em;
-    margin-top: 15px;
-    color: #333;
-    display: block;
+.nav-menu {
+    display: flex;
+    gap: 2.5rem;
 }
 
-input {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.4em;
-    margin-top: 10px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    box-sizing: border-box;
-    transition: border 0.3s ease-in-out;
+.nav-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
-input:focus {
-    border-color: #FF6347;
+.nav-link:hover,
+.nav-link.active {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-/* Glow on Hover */
-button {
-    background-color: #FF6347;
-    color: white;
-    border: 2px solid #FF6347;
-    padding: 20px;
-    font-size: 16px;
+.mobile-menu-toggle {
+    display: none;
     cursor: pointer;
-    margin: 10px;
-    border-radius: 15px;
-    transition: box-shadow 0.3s ease;
-    width: 100%;
-  }
-  
-  button:hover {
-    box-shadow: 0 0 15px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8);
-  }
-  
-
-footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-/* Ensure slight horizontal scrolling effect */
-body::after {
-    content: '';
+.mobile-menu-toggle:hover {
+    background: #f5f5f5;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.hero-cta {
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: #000000;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-button:hover {
+    background: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #000000;
     display: block;
-    width: 5vw; /* Slight overflow beyond the viewport */
-    height: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #666666;
+    font-weight: 500;
+}
+
+/* Search Section */
+.search-section {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-header {
+    margin-bottom: 3rem;
+}
+
+.search-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.search-header p {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999999;
+    font-size: 1.1rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #f0f0f0;
+    background: #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+    transform: translateY(-2px);
+}
+
+.sort-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.sort-label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.sort-dropdown {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    background: #ffffff;
+    font-size: 0.95rem;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.sort-dropdown:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Books Section */
+.books-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.book-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.book-image {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    position: relative;
+}
+
+.book-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #000000, #666666);
+}
+
+.book-content {
+    padding: 2rem;
+}
+
+.book-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.book-author,
+.book-subject {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.book-description {
+    color: #666666;
+    font-size: 0.95rem;
+    margin: 1.25rem 0;
+    line-height: 1.6;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 0.9rem;
+}
+
+.rating-text {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+
+.reviews-count {
+    color: #666666;
+    font-size: 0.85rem;
+}
+
+.book-price-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.original-price {
+    font-size: 1rem;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.discount {
+    background: #000000;
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.book-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.book-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.book-stat i {
+    font-size: 0.8rem;
+}
+
+.book-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.unlock-btn {
+    flex: 1;
+    padding: 1rem;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.unlock-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.view-details-btn {
+    padding: 1rem;
+    background: #f5f5f5;
+    color: #666666;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-details-btn:hover {
+    background: #e5e5e5;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* Book Detail Modal */
+.book-detail-content {
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.book-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.book-detail-left {
+    text-align: center;
+}
+
+.book-cover {
+    width: 200px;
+    height: 280px;
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    color: white;
+    margin: 0 auto 2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.book-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.bestseller {
+    background: #000000;
+    color: #ffffff;
+}
+
+.badge.difficulty {
+    background: #f0f0f0;
+    color: #666666;
+}
+
+.book-detail-right h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.detail-author {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: #ffd700;
+}
+
+.rating-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.reviews-count {
+    color: #666666;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.current-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000000;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.discount {
+    background: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.book-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+.stat-item i {
+    color: #000000;
+    width: 16px;
+}
+
+.book-features {
+    margin-bottom: 2rem;
+}
+
+.book-features h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.book-features ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.book-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+.book-features li::before {
+    content: '✓';
+    color: #000000;
+    font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-buttons .btn {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+}
+
+.book-description-section {
+    margin-bottom: 3rem;
+}
+
+.book-description-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.book-description-section p {
+    color: #666666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.book-info-tabs {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 2rem;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tab-btn {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666666;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+.tab-btn:hover {
+    color: #000000;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.detail-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-item strong {
+    color: #1a1a1a;
+}
+
+.info-item span {
+    color: #666666;
+}
+
+.contents-preview h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.chapter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.chapter-item:last-child {
+    border-bottom: none;
+}
+
+.chapter-number {
+    font-weight: 600;
+    color: #000000;
+    min-width: 60px;
+}
+
+.chapter-title {
+    flex: 1;
+    color: #1a1a1a;
+}
+
+.chapter-pages {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+.reviews-section {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.review-summary {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.rating-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.rating-bar span:first-child {
+    min-width: 40px;
+}
+
+.rating-bar span:last-child {
+    min-width: 40px;
+    text-align: right;
+    color: #666666;
+}
+
+.bar {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar .fill {
+    height: 100%;
+    background: #000000;
+    transition: width 0.3s ease;
+}
+
+.sample-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.reviewer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.reviewer-info strong {
+    color: #1a1a1a;
+}
+
+.review-stars {
+    color: #ffd700;
+    font-size: 0.9rem;
+}
+
+.review-item p {
+    color: #666666;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* About Section */
+.about-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.about-header p {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-icon {
+    width: 80px;
+    height: 80px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.about-card p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.contact-card p {
+    color: #666666;
+    margin-bottom: 0.25rem;
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    animation: modalSlideIn 0.4s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #666666;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: #f5f5f5;
+    color: #000000;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.book-preview {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.book-thumbnail {
+    width: 80px;
+    height: 100px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.book-info h4 {
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.book-info p {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.password-form label {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 1.05rem;
+}
+
+.password-form input {
+    padding: 1rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.password-form input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: #000000;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: #f5f5f5;
+    color: #666666;
+    border: 2px solid #f0f0f0;
+}
+
+.btn-secondary:hover {
+    background: #e5e5e5;
+    color: #1a1a1a;
+}
+
+.btn-success {
+    background: #000000;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fef2f2;
+    border-radius: 12px;
+    border-left: 4px solid #dc2626;
+    display: none;
+}
+
+.success-content .modal-body {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.success-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.success-content p {
+    color: #666666;
+    margin-bottom: 2rem;
+}
+
+/* Loading Spinner */
+.loading {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+}
+
+.spinner {
+    border: 4px solid #f0f0f0;
+    border-top: 4px solid #000000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.footer-brand i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.footer-section p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #333333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.75rem;
+    color: #cccccc;
+}
+
+.contact-item i {
+    width: 20px;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333333;
+    color: #cccccc;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .book-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .book-cover {
+        margin: 0 auto 1rem;
+    }
+    
+    .book-features ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #f0f0f0;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .filter-btn {
+        width: 200px;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .book-detail-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .book-preview {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .book-actions {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .tab-btn {
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 0;
+    }
+    
+    .tab-btn.active {
+        background: #f8f9fa;
+        border-bottom-color: #000000;
+    }
+    
+    .detail-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .search-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .search-box input {
+        padding: 1rem 1rem 1rem 3rem;
+        font-size: 1rem;
+    }
+    
+    .book-card {
+        margin: 0 10px;
+    }
+    
+    .stat-card {
+        padding: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .book-cover {
+        width: 150px;
+        height: 210px;
+        font-size: 4rem;
+    }
+    
+    .book-detail-right h2 {
+        font-size: 1.5rem;
+    }
+    
+    .current-price {
+        font-size: 1.5rem;
+    }
+    
+    .book-price-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
 }
 
 .hidden {
     display: none;
 }
 
-.box-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-top: 20px;
+.visible {
+    display: block;
 }
 
-.box {
-    width: 48%; /* Reduce size for slight spacing */
-    margin: 10px;
-    padding: 30px;
-    background-color: #FF6347;
-    color: white;
-    font-size: 1.5em;
+/* No books message */
+.no-books {
+    grid-column: 1 / -1;
     text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
+    padding: 4rem 2rem;
+    color: #666666;
 }
 
-.box:hover {
-    transform: scale(1.1);
-    background-color: #FF4500;
+.no-books i {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #cccccc;
 }
 
-.sub-box-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 20px;
-    gap: 10px;
+.no-books h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #666666;
 }
 
-.sub-box {
-    width: 30%;
-    padding: 20px;
-    background-color: #FF6347;
-    color: white;
-    font-size: 1.2em;
-    text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
+.no-books p {
+    font-size: 1.1rem;
+    color: #999999;
+}</style>
+
+    <script> // Global variables
+let ebooks = [];
+let currentBooks = [];
+let selectedBook = null;
+let downloadStats = {
+    totalDownloads: 0,
+    downloadsToday: 0,
+    lastDownloadDate: null
+};
+
+// Initialize the application
+document.addEventListener('DOMContentLoaded', function() {
+    loadEbookData();
+    loadDownloadStats();
+    renderBooks();
+    loadUserPreferences();
+});
+
+// Load ebook data from JSON script tag
+function loadEbookData() {
+    const ebookDataScript = document.getElementById('ebookData');
+    const data = JSON.parse(ebookDataScript.textContent);
+    ebooks = data.books;
+    currentBooks = [...ebooks];
+    
+    // Update hero book count
+    document.getElementById('heroBookCount').textContent = ebooks.length;
 }
 
-.sub-box:hover {
-    transform: scale(1.1);
-    background-color: #FF4500;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        margin-right: 10px;
-    }
-
-    h2 {
-        font-size: 2.4em;
-    }
-
-    button {
-        padding: 15px;
-        font-size: 1.4em;
-    }
-
-    footer {
-        font-size: 1.2em;
+// Load download statistics from localStorage
+function loadDownloadStats() {
+    const saved = localStorage.getItem('downloadStats');
+    if (saved) {
+        downloadStats = JSON.parse(saved);
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        font-size: 2.5em;
-        margin-bottom: 30px;
+// Render books grid
+function renderBooks() {
+    const booksGrid = document.getElementById('booksGrid');
+    
+    if (currentBooks.length === 0) {
+        booksGrid.innerHTML = `
+            <div class="no-books">
+                <i class="fas fa-search"></i>
+                <h3>No books found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        `;
+        return;
     }
-
-    .container {
-        padding: 20px;
-        margin-right: 5px;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    label {
-        font-size: 1.2em;
-    }
-
-    input {
-        font-size: 1.2em;
-    }
-
-    button {
-        padding: 10px;
-        font-size: 1.2em;
-    }
-
-    footer {
-        font-size: 1em;
-    }
-
+    
+    booksGrid.innerHTML = currentBooks.map(book => {
+        const discountPercent = Math.round(((parseInt(book.originalPrice.replace('₹', '')) - parseInt(book.discountPrice.replace('₹', ''))) / parseInt(book.originalPrice.replace('₹', ''))) * 100);
+        
+        return `
+            <div class="book-card fade-in" onclick="openBookDetailModal(${book.id})">
+                <div class="book-image">
+                    ${book.thumbnail}
+                </div>
+                <div class="book-content">
+                    <h3 class="book-title">${book.title}</h3>
+                    <p class="book-author">by ${book.author}</p>
+                    <p class="book-subject">${capitalizeFirst(book.subject)}</p>
+                    <p class="book-description">${book.description}</p>
+                    
+                    <div class="book-rating">
+                        <div class="stars">${generateStars(book.rating)}</div>
+                        <span class="rating-text">${book.rating}</span>
+                        <span class="reviews-count">(${book.reviews.toLocaleString()} reviews)</span>
+                    </div>
+                    
+                    <div class="book-price-section">
+                        <span class="current-price">${book.discountPrice}</span>
+                        <span class="original-price">${book.originalPrice}</span>
+                        <span class="discount">${discountPercent}% OFF</span>
+                    </div>
+                    
+                    <div class="book-stats">
+                        <div class="book-stat">
+                            <i class="fas fa-file-alt"></i>
+                            <span>${book.pages} pages</span>
+                        </div>
+                        <div class="book-stat">
+                            <i class="fas fa-download"></i>
+                            <span>${book.downloadCount.toLocaleString()}</span>
+                        </div>
+                        <div class="book-stat">
+                            <i class="fas fa-eye"></i>
+                            <span>${book.previewPages} preview</span>
+                        </div>
+                    </div>
+                    
+                    <div class="book-actions">
+                        <button class="unlock-btn" onclick="event.stopPropagation(); openUnlockModal(${book.id})">
+                            <i class="fas fa-unlock"></i>
+                            Unlock eBook
+                        </button>
+                        <button class="view-details-btn" onclick="event.stopPropagation(); openBookDetailModal(${book.id})">
+                            <i class="fas fa-info-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
 }
 
-div {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Class Selection Page */
-  #classSelectionPage {
-    background-color: white;
-    border-radius: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 105%; /* Slightly exceed the viewport width */
-    max-width: 650px; /* Limit max width for consistency */
-    margin-right: 20px; /* Add spacing from the right */
-    animation: slideIn 1s ease-out;
-    position: relative;
-    height: 250px;
-  }
-  
-  #classSelectionPage h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  
-  
- 
-  
-  /* Class 11 and Class 12 Password Pages */
-  input[type="password"] {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 105%; /* Slightly exceed the viewport width */
-    max-width: 650px; /* Limit max width for consistency */
-    margin-right: 20px; /* Add spacing from the right */
-    animation: slideIn 1s ease-out;
-    position: relative;
-  }
-  
-  #class11PasswordPage, #class12PasswordPage {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 105%; /* Slightly exceed the viewport width */
-    max-width: 650px; /* Limit max width for consistency */
-    margin-right: 20px; /* Add spacing from the right */
-    animation: slideIn 1s ease-out;
-    position: relative;
-  }
-  
-  #class11PasswordPage h2, #class12PasswordPage h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  #errorMessage {
-    color: red;
-    font-size: 14px;
-  }
-  
-  /* Success Pages */
-  #class11SuccessPage, #class12SuccessPage {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 105%; /* Slightly exceed the viewport width */
-    max-width: 650px; /* Limit max width for consistency */
-    margin-right: 20px; /* Add spacing from the right */
-    animation: slideIn 1s ease-out;
-    position: relative; /* Ensures content is treated as a block */
-  }
-  
-  #class11SuccessPage h2, #class12SuccessPage h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Member Area */
-  #memberAreaPage {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 105%; /* Slightly exceed the viewport width */
-    max-width: 650px; /* Limit max width for consistency */
-    margin-right: 20px; /* Add spacing from the right */
-    animation: slideIn 1s ease-out;
-    position: relative; /* Ensures content is treated as a block */
-  }
-  
-  #memberAreaPage h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  #memberAreaPage p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
+// Generate star rating HTML
+function generateStars(rating) {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    let starsHTML = '';
+    
+    for (let i = 0; i < fullStars; i++) {
+        starsHTML += '⭐';
+    }
+    
+    if (hasHalfStar) {
+        starsHTML += '⭐';
+    }
+    
+    return starsHTML;
+}
 
-  </style>
+// Open book detail modal
+function openBookDetailModal(bookId) {
+    selectedBook = ebooks.find(book => book.id === bookId);
+    if (!selectedBook) return;
+    
+    // Populate modal with book details
+    document.getElementById('detailBookThumbnail').textContent = selectedBook.thumbnail;
+    document.getElementById('detailBookTitle').textContent = selectedBook.title;
+    document.getElementById('detailBookAuthor').textContent = selectedBook.author;
+    document.getElementById('detailStars').innerHTML = generateStars(selectedBook.rating);
+    document.getElementById('detailRating').textContent = selectedBook.rating;
+    document.getElementById('detailReviews').textContent = selectedBook.reviews.toLocaleString();
+    
+    // Price information
+    document.getElementById('detailCurrentPrice').textContent = selectedBook.discountPrice;
+    document.getElementById('detailOriginalPrice').textContent = selectedBook.originalPrice;
+    const discountPercent = Math.round(((parseInt(selectedBook.originalPrice.replace('₹', '')) - parseInt(selectedBook.discountPrice.replace('₹', ''))) / parseInt(selectedBook.originalPrice.replace('₹', ''))) * 100);
+    document.getElementById('detailDiscount').textContent = `${discountPercent}% OFF`;
+    
+    // Book stats
+    document.getElementById('detailPages').textContent = selectedBook.pages.toLocaleString();
+    document.getElementById('detailLanguage').textContent = selectedBook.language;
+    document.getElementById('detailDownloads').textContent = selectedBook.downloadCount.toLocaleString();
+    document.getElementById('detailYear').textContent = selectedBook.publishYear;
+    document.getElementById('detailPreviewPages').textContent = selectedBook.previewPages;
+    
+    // Features
+    const featuresHTML = selectedBook.features.map(feature => `<li>${feature}</li>`).join('');
+    document.getElementById('detailFeatures').innerHTML = featuresHTML;
+    
+    // Full description
+    document.getElementById('detailFullDescription').textContent = selectedBook.fullDescription;
+    
+    // Details tab information
+    document.getElementById('detailPublisher').textContent = selectedBook.publisher;
+    document.getElementById('detailISBN').textContent = selectedBook.isbn;
+    document.getElementById('detailChapters').textContent = selectedBook.chapters;
+    document.getElementById('detailLastUpdated').textContent = new Date(selectedBook.lastUpdated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    
+    // Badges
+    document.getElementById('detailDifficulty').textContent = selectedBook.difficulty;
+    
+    // Generate table of contents
+    generateTableOfContents(selectedBook.chapters);
+    
+    // Show modal
+    document.getElementById('bookDetailModal').style.display = 'block';
+    
+    // Reset to first tab
+    showTab('details');
+}
 
-</head>
-<script>
-    // Form submission handling
-    document.getElementById("infoForm").addEventListener("submit", function(event) {
+// Generate table of contents
+function generateTableOfContents(chapterCount) {
+    const tableOfContents = document.getElementById('tableOfContents');
+    let contentsHTML = '';
+    
+    for (let i = 1; i <= chapterCount; i++) {
+        const chapterTitle = getChapterTitle(i, selectedBook.subject);
+        const startPage = Math.floor((i - 1) * (selectedBook.pages / chapterCount)) + 1;
+        const endPage = Math.floor(i * (selectedBook.pages / chapterCount));
+        
+        contentsHTML += `
+            <div class="chapter-item">
+                <span class="chapter-number">Ch ${i}</span>
+                <span class="chapter-title">${chapterTitle}</span>
+                <span class="chapter-pages">pp. ${startPage}-${endPage}</span>
+            </div>
+        `;
+    }
+    
+    tableOfContents.innerHTML = contentsHTML;
+}
+
+// Get chapter title based on subject
+function getChapterTitle(chapterNum, subject) {
+    const chapterTitles = {
+        mathematics: [
+            'Relations and Functions', 'Inverse Trigonometric Functions', 'Matrices',
+            'Determinants', 'Continuity and Differentiability', 'Applications of Derivatives',
+            'Integrals', 'Applications of Integrals', 'Differential Equations',
+            'Vector Algebra', 'Three Dimensional Geometry', 'Linear Programming',
+            'Probability', 'Statistics', 'Complex Numbers', 'Sequences and Series',
+            'Limits', 'Mathematical Reasoning'
+        ],
+        physics: [
+            'Electric Charges and Fields', 'Electrostatic Potential', 'Current Electricity',
+            'Moving Charges and Magnetism', 'Magnetism and Matter', 'Electromagnetic Induction',
+            'Alternating Current', 'Electromagnetic Waves', 'Ray Optics', 'Wave Optics',
+            'Dual Nature of Radiation', 'Atoms', 'Nuclei', 'Semiconductor Electronics',
+            'Communication Systems', 'Mechanical Properties', 'Thermal Properties',
+            'Thermodynamics', 'Kinetic Theory', 'Oscillations', 'Waves', 'Work Energy Power'
+        ],
+        chemistry: [
+            'Solid State', 'Solutions', 'Electrochemistry', 'Chemical Kinetics',
+            'Surface Chemistry', 'General Principles of Metallurgy', 'p-Block Elements',
+            'd and f Block Elements', 'Coordination Compounds', 'Haloalkanes',
+            'Alcohols Phenols Ethers', 'Aldehydes Ketones', 'Carboxylic Acids',
+            'Amines', 'Biomolecules', 'Polymers'
+        ],
+        biology: [
+            'Reproduction in Organisms', 'Sexual Reproduction in Plants', 'Human Reproduction',
+            'Reproductive Health', 'Principles of Inheritance', 'Molecular Basis of Inheritance',
+            'Evolution', 'Human Health and Disease', 'Microbes in Human Welfare',
+            'Biotechnology Principles', 'Biotechnology Applications', 'Organisms and Populations',
+            'Ecosystem', 'Biodiversity and Conservation', 'Environmental Issues',
+            'Breathing and Exchange of Gases', 'Body Fluids and Circulation',
+            'Excretory Products', 'Locomotion and Movement', 'Neural Control'
+        ],
+        computer: [
+            'Programming Fundamentals', 'Data Types and Variables', 'Control Structures',
+            'Functions and Modules', 'Data Structures', 'File Handling',
+            'Object Oriented Programming', 'Database Concepts', 'SQL Queries',
+            'Web Development Basics', 'Algorithms', 'Sorting and Searching',
+            'Computer Networks', 'Internet Technologies'
+        ],
+        english: [
+            'Reading Comprehension', 'Grammar and Usage', 'Vocabulary Building',
+            'Essay Writing', 'Letter Writing', 'Poetry Analysis',
+            'Prose Analysis', 'Drama and Theatre', 'Creative Writing',
+            'Communication Skills', 'Public Speaking', 'Literary Devices'
+        ]
+    };
+    
+    const titles = chapterTitles[subject] || ['Chapter ' + chapterNum];
+    return titles[chapterNum - 1] || 'Chapter ' + chapterNum;
+}
+
+// Close book detail modal
+function closeBookDetailModal() {
+    document.getElementById('bookDetailModal').style.display = 'none';
+}
+
+// Open unlock modal from detail view
+function openUnlockModalFromDetail() {
+    closeBookDetailModal();
+    openUnlockModal(selectedBook.id);
+}
+
+// Show tab content
+function showTab(tabName) {
+    // Hide all tab panes
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.remove('active');
+    });
+    
+    // Remove active class from all tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Show selected tab pane
+    document.getElementById(tabName + 'Tab').classList.add('active');
+    
+    // Add active class to selected tab button
+    event.target.classList.add('active');
+}
+
+// Preview book function
+function previewBook() {
+    showNotification(`📖 Preview of "${selectedBook.title}" - First ${selectedBook.previewPages} pages available for viewing.`);
+    
+    // In a real application, this would open a PDF viewer with limited pages
+    // For demo purposes, we'll show a notification
+    setTimeout(() => {
+        if (selectedBook.downloadLink) {
+            window.open(selectedBook.downloadLink, '_blank');
+        }
+    }, 1000);
+}
+
+// Search books
+function searchBooks() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    
+    if (searchTerm === '') {
+        currentBooks = [...ebooks];
+    } else {
+        currentBooks = ebooks.filter(book => 
+            book.title.toLowerCase().includes(searchTerm) ||
+            book.author.toLowerCase().includes(searchTerm) ||
+            book.subject.toLowerCase().includes(searchTerm) ||
+            book.description.toLowerCase().includes(searchTerm)
+        );
+    }
+    
+    renderBooks();
+}
+
+// Filter books by subject
+function filterBooks(subject) {
+    // Update active filter button
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    if (subject === 'all') {
+        currentBooks = [...ebooks];
+    } else {
+        currentBooks = ebooks.filter(book => book.subject === subject);
+    }
+    
+    renderBooks();
+}
+
+// Sort books
+function sortBooks() {
+    const sortBy = document.getElementById('sortSelect').value;
+    
+    switch (sortBy) {
+        case 'title':
+            currentBooks.sort((a, b) => a.title.localeCompare(b.title));
+            break;
+        case 'rating':
+            currentBooks.sort((a, b) => b.rating - a.rating);
+            break;
+        case 'price':
+            currentBooks.sort((a, b) => {
+                const priceA = parseInt(a.discountPrice.replace('₹', ''));
+                const priceB = parseInt(b.discountPrice.replace('₹', ''));
+                return priceA - priceB;
+            });
+            break;
+        case 'downloads':
+            currentBooks.sort((a, b) => b.downloadCount - a.downloadCount);
+            break;
+        case 'newest':
+            currentBooks.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+            break;
+        default:
+            break;
+    }
+    
+    renderBooks();
+}
+
+// Open unlock modal
+function openUnlockModal(bookId) {
+    selectedBook = ebooks.find(book => book.id === bookId);
+    if (!selectedBook) return;
+    
+    // Populate modal with book info
+    document.getElementById('modalBookTitle').textContent = selectedBook.title;
+    document.getElementById('modalBookAuthor').textContent = `by ${selectedBook.author}`;
+    document.getElementById('modalBookSubject').textContent = capitalizeFirst(selectedBook.subject);
+    document.getElementById('modalBookThumbnail').textContent = selectedBook.thumbnail;
+    
+    // Clear previous input and error
+    document.getElementById('passwordInput').value = '';
+    hideError();
+    
+    // Show modal
+    document.getElementById('passwordModal').style.display = 'block';
+    document.getElementById('passwordInput').focus();
+}
+
+// Check password
+function checkPassword() {
+    const enteredPassword = document.getElementById('passwordInput').value;
+    
+    if (!enteredPassword) {
+        showError('Please enter a password');
+        return;
+    }
+    
+    // Show loading
+    showLoading();
+    
+    // Simulate API call delay
+    setTimeout(() => {
+        hideLoading();
+        
+        if (enteredPassword === selectedBook.password) {
+            // Password correct
+            closeModal();
+            showSuccessModal();
+            updateDownloadStats();
+        } else {
+            // Password incorrect
+            showError('Incorrect password. Please try again.');
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('passwordInput').focus();
+        }
+    }, 1000);
+}
+
+// Handle password input key press
+function handlePasswordKeyPress(event) {
+    if (event.key === 'Enter') {
+        checkPassword();
+    }
+}
+
+// Show success modal
+function showSuccessModal() {
+    document.getElementById('successModal').style.display = 'block';
+    
+    // Set up view PDF button
+    const viewPdfBtn = document.getElementById('viewPdfBtn');
+    viewPdfBtn.onclick = function() {
+        viewPdf();
+    };
+}
+
+// Convert Google Drive link to embeddable format
+function convertGoogleDriveLink(originalLink) {
+    // Extract file ID from Google Drive link
+    const fileIdMatch = originalLink.match(/\/file\/d\/([a-zA-Z0-9-_]+)/);
+    if (fileIdMatch) {
+        const fileId = fileIdMatch[1];
+        // Return embeddable Google Drive link
+        return `https://drive.google.com/file/d/${fileId}/preview`;
+    }
+    return originalLink; // Return original if not a Google Drive link
+}
+
+// View PDF function (replaces download)
+function viewPdf() {
+    // Show loading
+    showLoading();
+    
+    setTimeout(() => {
+        hideLoading();
+        
+        // Convert Google Drive link to embeddable format if needed
+        let pdfLink = selectedBook.downloadLink;
+        if (pdfLink.includes('drive.google.com')) {
+            pdfLink = convertGoogleDriveLink(pdfLink);
+        }
+        
+        // Open the PDF link in a new tab for viewing
+        if (pdfLink) {
+            window.open(pdfLink, '_blank');
+        }
+        
+        // Show success message
+        showNotification(`📚 "${selectedBook.title}" is now open for viewing!`);
+        
+        // Close modal
+        closeSuccessModal();
+        
+        // Update stats
+        updateDownloadStats();
+    }, 1500);
+}
+
+// Update download statistics
+function updateDownloadStats() {
+    const today = new Date().toDateString();
+    
+    if (downloadStats.lastDownloadDate !== today) {
+        downloadStats.downloadsToday = 0;
+        downloadStats.lastDownloadDate = today;
+    }
+    
+    downloadStats.totalDownloads++;
+    downloadStats.downloadsToday++;
+    
+    localStorage.setItem('downloadStats', JSON.stringify(downloadStats));
+}
+
+// Show error message
+function showError(message) {
+    const errorDiv = document.getElementById('errorMessage');
+    errorDiv.textContent = message;
+    errorDiv.style.display = 'block';
+}
+
+// Hide error message
+function hideError() {
+    document.getElementById('errorMessage').style.display = 'none';
+}
+
+// Show loading
+function showLoading() {
+    document.getElementById('loading').style.display = 'block';
+}
+
+// Hide loading
+function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+}
+
+// Close modal
+function closeModal() {
+    document.getElementById('passwordModal').style.display = 'none';
+}
+
+// Close success modal
+function closeSuccessModal() {
+    document.getElementById('successModal').style.display = 'none';
+    selectedBook = null;
+}
+
+// Navigation functions
+function showHome() {
+    // Hide all sections
+    document.getElementById('aboutSection').style.display = 'none';
+    document.getElementById('contactSection').style.display = 'none';
+    
+    // Show home sections
+    document.querySelector('.books-section').style.display = 'block';
+    document.querySelector('.search-section').style.display = 'block';
+    document.querySelector('.hero').style.display = 'block';
+    
+    // Update active nav link
+    updateActiveNavLink('[onclick="showHome()"]');
+}
+
+function showAbout() {
+    // Hide all sections
+    document.getElementById('contactSection').style.display = 'none';
+    document.querySelector('.books-section').style.display = 'none';
+    document.querySelector('.search-section').style.display = 'none';
+    document.querySelector('.hero').style.display = 'none';
+    
+    // Show about section
+    document.getElementById('aboutSection').style.display = 'block';
+    
+    // Update active nav link
+    updateActiveNavLink('[onclick="showAbout()"]');
+}
+
+function showContact() {
+    // Hide all sections
+    document.getElementById('aboutSection').style.display = 'none';
+    document.querySelector('.books-section').style.display = 'none';
+    document.querySelector('.search-section').style.display = 'none';
+    document.querySelector('.hero').style.display = 'none';
+    
+    // Show contact section
+    document.getElementById('contactSection').style.display = 'block';
+    
+    // Update active nav link
+    updateActiveNavLink('[onclick="showContact()"]');
+}
+
+function updateActiveNavLink(selector) {
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    const activeLink = document.querySelector(selector);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+}
+
+// Scroll to books section
+function scrollToBooks() {
+    showHome();
+    setTimeout(() => {
+        document.getElementById('booksSection').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }, 100);
+}
+
+// Contact form submission
+function submitContactForm(event) {
     event.preventDefault();
-    const name = document.getElementById("name").value;
-    document.getElementById("userName").textContent = name;
-    document.getElementById("formPage").classList.add("hidden");
-    document.getElementById("secondPage").classList.remove("hidden");
-  });
-  
-  // Show password page function
-  function showPasswordPage() {
-    document.getElementById("secondPage").classList.add("hidden");
-document.getElementById("classSelectionPage").classList.remove("hidden");
-  }
-  // Handle Class Selection
-document.getElementById("class11Button").addEventListener("click", function () {
-    document.getElementById("classSelectionPage").classList.add("hidden");
-    document.getElementById("passwordPage").classList.remove("hidden"); // Continue for Class 11
-  });
-  
-  document.getElementById("class12Button").addEventListener("click", function () {
-    alert("Currently, only Class 11 resources are available.");
-  });
-  
-// Show Class 11 password page
-function showClass11PasswordPage() {
-    // Hide class selection page and show Class 11 password page
-    document.getElementById("classSelectionPage").classList.add("hidden");
-    document.getElementById("class11PasswordPage").classList.remove("hidden");
-  }
-  
-  // Show Class 12 password page
-  function showClass12PasswordPage() {
-    // Hide class selection page and show Class 12 password page
-    document.getElementById("classSelectionPage").classList.add("hidden");
-    document.getElementById("class12PasswordPage").classList.remove("hidden");
-  }
-  
-  // Check Class 11 password
-function checkClass11Password() {
-    const password = document.getElementById("class11Password").value;
-    if (password === "Chanpreet11") {
-      // Correct password, proceed to the success message (4th page)
-      alert("Class 11 password correct!");
-      
-      // Hide the Class 11 password page
-      document.getElementById("class11PasswordPage").classList.add("hidden");
-      
-      // Show the success page (4th page)
-      document.getElementById("fourthPage").classList.remove("hidden");
-    } else {
-      // Incorrect password, display an error message
-      document.getElementById("class11ErrorMessage").textContent = "Incorrect password. Please try again.";
+    showLoading();
+    
+    setTimeout(() => {
+        hideLoading();
+        showNotification('✅ Thank you for your message! We\'ll get back to you soon.');
+        event.target.reset();
+    }, 2000);
+}
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+// Show notification
+function showNotification(message) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: #000000;
+        color: #ffffff;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        z-index: 3000;
+        font-weight: 500;
+        max-width: 300px;
+        animation: slideInRight 0.3s ease;
+    `;
+    notification.textContent = message;
+    
+    // Add animation keyframes
+    if (!document.getElementById('notificationStyles')) {
+        const style = document.createElement('style');
+        style.id = 'notificationStyles';
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
     }
-  }
-  
-  // Check Class 12 password
-function checkClass12Password() {
-    const password = document.getElementById("class12Password").value;
-    if (password === "Chanpreet12") {
-      // Correct password, proceed to the success message (Class 12 success page)
-      alert("Class 12 password correct!");
-      
-      // Hide the Class 12 password page
-      document.getElementById("class12PasswordPage").classList.add("hidden");
-      
-      // Show the success page for Class 12
-      document.getElementById("class12SuccessPage").classList.remove("hidden");
-    } else {
-      // Incorrect password, display an error message
-      document.getElementById("class12ErrorMessage").textContent = "Incorrect password. Please try again.";
+    
+    document.body.appendChild(notification);
+    
+    // Remove notification after 4 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 4000);
+}
+
+// Utility functions
+function capitalizeFirst(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function loadUserPreferences() {
+    const preferences = localStorage.getItem('userPreferences');
+    if (preferences) {
+        const prefs = JSON.parse(preferences);
+        // Load any saved preferences
     }
-  }
-  
-  // Navigate to the member area
-  function showMemberArea() {
-    document.getElementById("fifthPage").classList.remove("hidden");
-    document.getElementById("fourthPage").classList.add("hidden");
-  }
-  // Function to navigate to the member area for Class 12
-function goToMemberArea() {
-    // Assuming you're hiding the success page and showing the member area
-    document.getElementById("class12SuccessPage").classList.add("hidden");
-    document.getElementById("memberAreaPage").classList.remove("hidden");
-  }
-  
-  // Navigate to subject selection
-  function showSubjectSelection() {
-    document.getElementById("subjectSelectionPage").classList.remove("hidden");
-    document.getElementById("fifthPage").classList.add("hidden");
-  }
-  
-  // Navigate to the subject selection page for TESTS
-  function showTestSubjectSelection() {
-    alert("You have selected the Test subjects.");
-    document.getElementById("testSubjectSelectionPage").classList.remove("hidden");
-    document.getElementById("fifthPage").classList.add("hidden");
-    document.getElementById("syllabusSelectionPage").classList.add("hidden");
-    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-  }
-  
-  // Navigate to the subject selection page for SYLLABUS
-  function showSyllabusSelection() {
-    alert("You have selected the Syllabus.");
-    document.getElementById("syllabusSelectionPage").classList.remove("hidden");
-    document.getElementById("fifthPage").classList.add("hidden");
-    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-  }
-  
-  // Navigate to the subject selection page for SAMPLE PAPERS
-  function showSamplePapersSelection() {
-    alert("You have selected Sample Papers.");
-    document.getElementById("samplePapersSelectionPage").classList.remove("hidden");
-    document.getElementById("fifthPage").classList.add("hidden");
-    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-    document.getElementById("syllabusSelectionPage").classList.add("hidden");
-  }
-  
-  // Go back to the member area
-  function backToMemberArea() {
-    document.getElementById("fifthPage").classList.remove("hidden");
-    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-    document.getElementById("syllabusSelectionPage").classList.add("hidden");
-    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-    document.getElementById("notesPage").classList.add("hidden");
-    document.getElementById("helpAndSupportPage").classList.add("hidden");
-  }
-  
-  // Chapter PDF open function
-  function openPDF(url) {
-    window.open(url, '_blank');
-  }
-  
-  // Show subject chapters for Accountancy
-  function showAccountancyChapters() {
-    alert("You have selected Accountancy.");
-    document.getElementById("accountancyChaptersPage").classList.remove("hidden");
-    document.getElementById("subjectSelectionPage").classList.add("hidden");
-  }
-  
-  // Show subject chapters for Economics
-  function showEconomicsChapters() {
-    alert("You have selected Economics.");
-    document.getElementById("economicsChaptersPage").classList.remove("hidden");
-    document.getElementById("subjectSelectionPage").classList.add("hidden");
-  }
-  
-  // Show subject chapters for Business Studies
-  function showBusinessStudiesChapters() {
-    alert("You have selected Business Studies.");
-    document.getElementById("businessStudiesChaptersPage").classList.remove("hidden");
-    document.getElementById("subjectSelectionPage").classList.add("hidden");
-  }
-  
-  // Go back to subject selection from chapter pages
-  function backToSubjectSelection() {
-    document.getElementById("subjectSelectionPage").classList.remove("hidden");
-    document.getElementById("accountancyChaptersPage").classList.add("hidden");
-    document.getElementById("economicsChaptersPage").classList.add("hidden");
-    document.getElementById("businessStudiesChaptersPage").classList.add("hidden");
-  }
-  
-  // Show the Notes page
-  function showNotes() {
-    document.getElementById("notesPage").classList.remove("hidden");
-    document.getElementById("fifthPage").classList.add("hidden");
-    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-    document.getElementById("syllabusSelectionPage").classList.add("hidden");
-    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-    document.getElementById("helpAndSupportPage").classList.add("hidden");
-  }
-  
-  // Show the Help and Support page
-  function showHelpAndSupport() {
-    document.getElementById("helpAndSupportPage").classList.remove("hidden");
-    document.getElementById("fifthPage").classList.add("hidden");
-    document.getElementById("testSubjectSelectionPage").classList.add("hidden");
-    document.getElementById("syllabusSelectionPage").classList.add("hidden");
-    document.getElementById("samplePapersSelectionPage").classList.add("hidden");
-    document.getElementById("notesPage").classList.add("hidden");
-  }
-</script>
-  
+}
+
+function saveUserPreferences() {
+    const preferences = {
+        lastVisit: new Date().toISOString()
+    };
+    localStorage.setItem('userPreferences', JSON.stringify(preferences));
+}
+
+// Close modals when clicking outside
+window.onclick = function(event) {
+    const passwordModal = document.getElementById('passwordModal');
+    const successModal = document.getElementById('successModal');
+    const bookDetailModal = document.getElementById('bookDetailModal');
+    
+    if (event.target === passwordModal) {
+        closeModal();
+    }
+    if (event.target === successModal) {
+        closeSuccessModal();
+    }
+    if (event.target === bookDetailModal) {
+        closeBookDetailModal();
+    }
+}
+
+// Handle escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+        closeSuccessModal();
+        closeBookDetailModal();
+    }
+});
+
+// Save preferences before page unload
+window.addEventListener('beforeunload', function() {
+    saveUserPreferences();
+});
+
+// Welcome message
+setTimeout(() => {
+    if (!localStorage.getItem('welcomeShown')) {
+        showNotification('🎉 Welcome to CS Store! Your premium destination for Class 12 eBooks.');
+        localStorage.setItem('welcomeShown', 'true');
+    }
+}, 2000);</script>
 </body>
 </html>
