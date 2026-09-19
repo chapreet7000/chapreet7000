@@ -1,203 +1,216 @@
-Hi, I'm Chanpreet Singh 👋
+<div align="center">
 
-AI Engineer in the making • Builder • Student • Creator
+CHANPREET SINGH
 
-I'm a Computer Science student passionate about Artificial Intelligence, Generative AI, and building real-world products.
+builder • AI enthusiast • student • founder
 
-I enjoy taking an idea from a simple concept → prototype → working product.
+I don't just learn technology — I build things with it.
 
-🚀 What I'm Working On
+<img src="https://komarev.com/ghpvc/?username=chapreet7000&style=for-the-badge&color=000000&label=PROFILE+VIEWS" />
 
-🤖 Generative AI & LLM applications
+</div>
 
-🧠 RAG systems, embeddings & semantic chunking
+> whoami
 
-🔗 LangChain & AI agent workflows
+I'm Chanpreet Singh, a Computer Science student and builder interested in the space where AI, education and products meet.
 
-🎓 CS Academy & CS.AI — building AI-powered educational experiences
+I like starting with a question:
 
-💻 180.OS — exploring the idea of a modern, minimal operating system experience
+"What if we built this differently?"
 
-🏗️ Hackathons, research projects & AI-powered products
+Then I prototype it, break it, learn why it broke, and build the next version.
 
-🧠 My Current Learning
+Right now, most of my time goes into Generative AI, RAG, LLM applications, AI agents and product development.
 
-Python
-  ↓
-Machine Learning
-  ↓
+⚡ CURRENTLY BUILDING
+
+┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│   🤖  AI / LLMs             →  learning + building           │
+│   🔎  RAG                   →  retrieval experiments         │
+│   🧩  Semantic Chunking     →  threshold + quality research  │
+│   🎓  CS.AI                →  AI × Education                │
+│   🏫  CS Academy           →  learning ecosystem             │
+│   🖥️  180.OS              →  product + OS exploration       │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+
+🧠 THE STUFF I'M OBSESSED WITH
+
 Generative AI
-  ↓
-LLMs
-  ↓
-Embeddings & Vector Databases
-  ↓
+LLMs • Prompt Engineering • AI Applications • AI Agents • Multimodal AI
+
 RAG
-  ↓
+Embeddings • Vector Search • Retrieval • Chunking • Context Quality
+
 Semantic Chunking
-  ↓
-AI Agents & Automation
+Absolute thresholds • Relative thresholds • Percentiles • Boundary detection • Retrieval experiments
 
-Currently going deeper into:
+Building Products
+Turning rough ideas into interfaces, prototypes and working products.
 
-RAG architecture
+🔬 CURRENT EXPERIMENT
 
-Chunking strategies
+Does better chunking = better RAG?
 
-Semantic chunking
+I've been experimenting with semantic chunking instead of treating chunk size as a one-number problem.
 
-Static & dynamic thresholds
+DOCUMENT
+   │
+   ▼
+SENTENCES
+   │
+   ▼
+SEMANTIC SIMILARITY
+   │
+   ▼
+THRESHOLD
+   │
+   ├── absolute
+   ├── relative
+   └── percentile
+          │
+          ▼
+      CHUNK BOUNDARIES
+          │
+          ▼
+     RETRIEVAL QUALITY
 
-Embeddings
+I'm comparing different percentile thresholds to understand their effect on:
 
-Fine-tuning
+chunk size
 
-LangChain
+semantic coherence
 
-AI agents
+context preservation
 
-AI automation
+retrieval behaviour
 
-🛠️ Tech Stack
+RAG quality
 
-Languages
+Basically: I'm trying to understand what happens inside the "magic" of RAG.
 
+🚀 PROJECTS
 
-
-
-
-
-AI / Data
-
-
-
-
-
-
-Tools & Platforms
-
-
-
-
-
-
-
-
-🌟 Featured Projects
+<table>
+<tr>
+<td width="50%" valign="top">
 
 🎓 CS Academy
 
-An educational platform built to make learning resources more accessible for students.
+An education-focused platform I started to make learning resources easier to access.
 
-Focus: Notes • Sample Papers • Tests • Study Resources
+Notes · Tests · Sample Papers · Study Resources
+
+</td>
+<td width="50%" valign="top">
 
 🤖 CS.AI
 
-An AI-powered academic assistant designed around the CS Academy ecosystem.
+An AI-powered academic assistant built around the CS Academy ecosystem.
 
-Focus: RAG • AI tutoring • Voice interaction • Image generation • Whiteboard • Multilingual learning
+RAG · Voice · Multimodal AI · Whiteboard · AI Tutoring
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 🖥️ 180.OS
 
-A personal exploration into creating a modern operating-system experience with a strong focus on simplicity and design.
+A personal exploration into what a modern, minimal operating-system experience could look like.
 
-Focus: Product design • UI/UX • System concepts
+Product Design · UI/UX · Systems · Brand
 
-📚 Research & Exploration
+</td>
+<td width="50%" valign="top">
 
-I'm particularly interested in understanding why AI systems work, not just how to use them.
+🧪 AI Experiments
 
-Some areas I'm exploring:
+Small experiments where I test ideas rather than just read about them.
 
-How does the way we split information affect the quality of Retrieval-Augmented Generation?
+Chunking · Embeddings · RAG · Agents · Automation
 
-This has led me into experiments around:
+</td>
+</tr>
+</table>
 
-Fixed-size chunking
+🛠️ TOOLBOX
 
-Recursive chunking
+<div align="center">
 
-Semantic chunking
+<img src="https://skillicons.dev/icons?i=python,js,html,css,git,github,vscode,vercel,supabase" />
 
-Absolute thresholds
+</div>
 
-Relative thresholds
+🧭 MY LEARNING PATH
 
-Percentile-based thresholds
+Python
+   │
+   ▼
+Machine Learning
+   │
+   ▼
+Generative AI
+   │
+   ▼
+LLMs
+   ├── Embeddings
+   ├── Vector Search
+   └── Prompt Engineering
+   │
+   ▼
+RAG
+   ├── Chunking
+   ├── Semantic Chunking
+   └── Retrieval
+   │
+   ▼
+AI Agents
+   │
+   ▼
+AI PRODUCTS
 
-Retrieval quality
+📊 GITHUB
 
-Context preservation
+<div align="center">
 
-🏆 Experience & Learning
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=chapreet7000&show_icons=true&hide_border=true&theme=transparent&rank_icon=github" />
 
-I've explored AI and technology through projects, job simulations, internships, hackathons and research.
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=chapreet7000&layout=compact&hide_border=true&theme=transparent" />
 
-Some areas I've worked with include:
+<br/>
 
-Generative AI Engineering
+<img src="https://streak-stats.demolab.com?user=chapreet7000&hide_border=true&theme=transparent" />
 
-Data Analytics
+</div>
 
-Cloud & Solutions Architecture
+🌐 FIND ME
 
-Prompt Engineering
+<div align="center">
 
-AI-powered product development
+<a href="https://www.linkedin.com/in/chanpreet-singh-79969b379/">
+<img src="https://img.shields.io/badge/LINKEDIN-000000?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="https://instagram.com/chanpreet_singh27">
+<img src="https://img.shields.io/badge/INSTAGRAM-000000?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
+<a href="https://github.com/chapreet7000">
+<img src="https://img.shields.io/badge/GITHUB-000000?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://csai-cs.lovable.app">
+<img src="https://img.shields.io/badge/CS.AI-000000?style=for-the-badge&logo=openai&logoColor=white" />
+</a>
 
-Research & experimentation
+</div>
 
-📊 GitHub
+<div align="center">
 
+BUILD → BREAK → LEARN → REBUILD
 
+Still learning. Still experimenting. Still building.
 
+If you're building something interesting with AI, I'd love to see it.
 
-
-🤝 Let's Connect
-
-I'm always interested in:
-
-AI & GenAI projects
-
-Research collaborations
-
-Hackathons
-
-Open-source projects
-
-Building startups/products
-
-Meeting other people passionate about technology
-
-Find me here
-
-LinkedIn: Chanpreet Singh
-
-Instagram: @chanpreet_singh27
-
-💭 A little about me
-
-I don't want to just learn technology.
-
-I want to build with it.
-
-From experimenting with an idea at midnight to turning it into something people can actually use — that's what keeps me excited.
-
-⭐ If you find something interesting in my projects, feel free to explore, connect, or collaborate.
-
-Thanks for visiting my profile! 🚀
-
-<!--
-**chapreet7000/chapreet7000** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+</div>
 -->
