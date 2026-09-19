@@ -96,7 +96,7 @@ A personal exploration into a modern, minimal operating-system experience.
 
 <td width="50%" valign="top">
 
-<h3 align="center">🧪 AI Experiments</h3>
+<h3 align="center">🧪 RESEARCH PAPERS</h3>
 
 <p align="center">
 Small experiments designed to understand AI systems beyond the abstraction.
